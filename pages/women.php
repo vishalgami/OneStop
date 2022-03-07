@@ -1,14 +1,14 @@
 <html>
     <head>
-        <title>OneStop - Kids</title>
+        <title>OneStop - Women</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
         <link rel="stylesheet" type="text/css" href="../css/products.css">
         <script src="../js/jquery-3.6.0.min.js"></script>
-        <script src="../js/filter.js"></script>
-        <script src="../js/product.js"></script>
         <script src="../js/header.js"></script>
+        <script src="../js/product.js"></script>
+        <script src="../js/filter.js"></script>
     </head>
     <body>
         <div class="container-fluid">
@@ -17,15 +17,15 @@
             <div class="header">
                 <ul class="left-menu" type="none">
                     <li class="logo">
-                        <a href="../index.html">
+                        <a href="../index.php">
                             <img src="../images/One1.png" alt="logo not found" title="logo" class="logo-img">
                         </a>
                     </li>
-                    <li><a href="men.html" class="header-link">Men</a></li>
-                    <li><a href="women.html" class="header-link">Women</a></li>
-                    <li><a href="kids.html" class="header-link">Kids</a></li>
-                    <li><a href="collections.html" class="header-link">Collections</a></li>
-                    <li><a href="new_arrivals.html" class="header-link">New Arrivals</a></li>
+                    <li><a href="men.php" class="header-link">Men</a></li>
+                    <li><a href="women.php" class="header-link">Women</a></li>
+                    <li><a href="kids.php" class="header-link">Kids</a></li>
+                    <li><a href="collections.php" class="header-link">Collections</a></li>
+                    <li><a href="new_arrivals.php" class="header-link">New Arrivals</a></li>
                 </ul>
                 <ul class="search-bar-menu" type="none">
                     <li>
@@ -45,22 +45,22 @@
                                     <div class="profile-dropdown-content">
                                         <b>Welcome</b><br/>
                                         <div class="text-muted">Access your account and manage orders</div><br/>
-                                        <a href="signin.html">
+                                        <a href="signin.php">
                                             <button type="button" class="btn btn-danger login-btn">Sign In</button>
                                         </a><br/>
-                                        <a href="signup.html" class="signup-link">Not connected yet ? Signup here !</a>
+                                        <a href="signup.php" class="signup-link">Not connected yet ? Signup here !</a>
                                         <hr/>
-                                        <a href="profile.html" class="profile-links">Account</a>
-                                        <a href="orders.html" class="profile-links">Orders</a>
-                                        <a href="wishlist.html" class="profile-links">Wishlist</a>
-                                        <a href="contact.html" class="profile-links">Contact Us</a>
+                                        <a href="profile.php" class="profile-links">Account</a>
+                                        <a href="orders.php" class="profile-links">Orders</a>
+                                        <a href="wishlist.php" class="profile-links">Wishlist</a>
+                                        <a href="contact.php" class="profile-links">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="wishlist.html" class="header-link">
+                        <a href="wishlist.php" class="header-link">
                             <div class="header-icon ">
                                 <div>
                                     <i class="fa fa-heart-o" style="color:deeppink;"></i>
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="cart.html" class="header-link">
+                        <a href="cart.php" class="header-link">
                             <div class="header-icon ">
                                 <div>
                                     <i class="fa fa-shopping-bag" style="color:red;"></i>
@@ -88,11 +88,11 @@
             
             <!-- End of header -->
             
-            <!--products section-->
+            <!--Products section-->
             <div class="row mens">
                 <div class="mens-header">
                     <div class="mens-title">
-                        Kids
+                        Women
                     </div>
                   
                     <div class="filter-main-title">
@@ -106,20 +106,20 @@
                 <div class="col-lg-2 filter-section-body">
                     <div class="filter-section">
                         <div class="filter-title" id="category-title">
-                             Categories  <span id="plus"><i class="fa fa-angle-down"></i></span>
+                             Categories <span id="plus"><i class="fa fa-angle-down"></i></span>
                         </div>
                         <div id="category-options">
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="shirt"/>
-                                <label class="form-check-label text-muted filter-label" for="shirt">Shirts</label>
+                                <label class="form-check-label text-muted filter-label" for="shirt">Kurtas & Suits</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="jeans"/>
-                                <label class="form-check-label text-muted filter-label" for="jeans">Jeans</label>
+                                <label class="form-check-label text-muted filter-label" for="jeans">Sarees</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="tshirts"/>
-                                <label class="form-check-label text-muted filter-label" for="tshirts">T-Shirts</label>
+                                <label class="form-check-label text-muted filter-label" for="tshirts">Ethnic wear</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="jackets"/>
@@ -131,7 +131,11 @@
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="suits"/>
-                                <label class="form-check-label text-muted filter-label" for="suits">Shorts</label>
+                                <label class="form-check-label text-muted filter-label" for="suits">Skirts & Palazzos</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="checkbox" class="form-check-input" id="blazers"/>
+                                <label class="form-check-label text-muted filter-label" for="blazers">Blazers & Coats</label>
                             </div>
                         </div>
                     </div>
@@ -143,23 +147,35 @@
                         <div id="brand-options">
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="ucb"/>
-                                <label class="form-check-label text-muted filter-label" for="ucb">United Colors of Benetton</label>
+                                <label class="form-check-label text-muted filter-label" for="ucb">Here & Now</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="checkbox" class="form-check-input" id="gap"/>
+                                <label class="form-check-label text-muted filter-label" for="gap">Nike</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="puma"/>
-                                <label class="form-check-label text-muted filter-label" for="puma">Puma</label>
+                                <label class="form-check-label text-muted filter-label" for="puma">Max</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="adidas"/>
-                                <label class="form-check-label text-muted filter-label" for="adidas">Adidas</label>
+                                <label class="form-check-label text-muted filter-label" for="adidas">Fabindia</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="nike"/>
-                                <label class="form-check-label text-muted filter-label" for="nike">Nike</label>
+                                <label class="form-check-label text-muted filter-label" for="nike">Indo Era</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="checkbox" class="form-check-input" id="roadster"/>
+                                <label class="form-check-label text-muted filter-label" for="roadster">GoSriki</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="max"/>
-                                <label class="form-check-label text-muted filter-label" for="max">Max</label>
+                                <label class="form-check-label text-muted filter-label" for="max">Vaamsi</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="checkbox" class="form-check-input" id="aeropostale"/>
+                                <label class="form-check-label text-muted filter-label" for="aeropostale">Varanga</label>
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="hm"/>
@@ -167,22 +183,9 @@
                             </div>
                             <div class="filter-options">
                                 <input type="checkbox" class="form-check-input" id="gap"/>
-                                <label class="form-check-label text-muted filter-label" for="gap">GAP</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Pepe Jeans</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Cutiekins</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Quechua</label>
+                                <label class="form-check-label text-muted filter-label" for="gap">Roadster</label>
                             </div>
                         </div>
-                        
                         
                     </div>
                     
@@ -218,106 +221,142 @@
                 <div class="col-md clothing">
                     <div class="clothing-grid-container">
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/pepe.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/here&now.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    Pepe Jeans
+                                    Here & Now
                                 </div>
                                 <div class="product-label">
-                                    Boys Regular Fit Casual Shirt 
+                                    Printed Cotton Kurta
                                 </div>
                                 <div class="product-price">
-                                    $10 <sub class="text-muted"><del>$18</del></sub>
+                                    $10 <sub class="text-muted"><del>$25</del></sub>
                                 </div>
                             </div>
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/h&m3.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/indoera.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    H & M
+                                    Indo Era
                                 </div>
                                 <div class="product-label">
-                                    Girls Printed T-shirt
+                                    Muted Hazelnut Kurta Set
                                 </div>
                                 <div class="product-price">
-                                    $7
+                                    $20 <sub class="text-muted"><del>$45</del></sub>
                                 </div>
                             </div>
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/gap1.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/fabindia.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    GAP
+                                    Fabindia
                                 </div>
                                 <div class="product-label">
-                                    Boys Regular Fit Cargo Shorts
+                                    Printed Kurta
                                 </div>
                                 <div class="product-price">
-                                    $18 <sub class="text-muted"><del>$32</del></sub>
+                                    $50
                                 </div>
                             </div>
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/max2.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/max.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
                                     Max
                                 </div>
                                 <div class="product-label">
-                                    Boys Slim Fit Jeans
+                                    Embroidered Straight Kurta
                                 </div>
                                 <div class="product-price">
-                                    $7
+                                    $10
                                 </div>
                             </div>
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/jacket.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/here&now1.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    H & M
+                                    Hero & Now
                                 </div>
                                 <div class="product-label">
-                                    Girls Denim Jacket
+                                    Printed Kurta With Palazzos
                                 </div>
                                 <div class="product-price">
-                                    $14 <sub class="text-muted"><del>$27</del></sub>
+                                    $25 <sub class="text-muted"><del>$50</del></sub>
                                 </div>
                             </div>
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/gap2.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/saree.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    GAP
+                                    GoSriki
                                 </div>
                                 <div class="product-label">
-                                    Boys Printed Sweatshirt
+                                    Embroidered Saree
+                                </div>
+                                <div class="product-price">
+                                    $20 <sub class="text-muted"><del>$60</del></sub>
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                        
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                            <div class="clothing-image">
+                                <img src="../images/product/vaamsi.webp" alt="Image not found" class="product-img"/>
+                            </div>
+                            <div class="product-info">
+                                <div class="brand-label">
+                                    Vaamsi
+                                </div>
+                                <div class="product-label">
+                                    Printed Saree
+                                </div>
+                                <div class="product-price">
+                                    $12 <sub class="text-muted"><del>$30</del></sub>
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                        
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                            <div class="clothing-image">
+                                <img src="../images/product/varanga.jpg" alt="Image not found" class="product-img"/>
+                            </div>
+                            <div class="product-info">
+                                <div class="brand-label">
+                                    Varanga
+                                </div>
+                                <div class="product-label">
+                                    Women Tiered Skirt
                                 </div>
                                 <div class="product-price">
                                     $15 <sub class="text-muted"><del>$35</del></sub>
@@ -326,34 +365,16 @@
                             </div>
                         </a>
                         
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/jacket1.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/roadster2.webp" alt="Image not found" class="product-img"/>
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    Quechua
+                                    Roadster
                                 </div>
                                 <div class="product-label">
-                                    Printed Padded Jacket
-                                </div>
-                                <div class="product-price">
-                                    $30 <sub class="text-muted"><del>$35</del></sub>
-                                </div>
-                            </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.html" target="_blank" class="product-link"><div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/cutiekins.webp" alt="Image not found" class="product-img"/>
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Cutiekins
-                                </div>
-                                <div class="product-label">
-                                    Girls Printed Skirts
+                                    Women Striped Sweatshirt
                                 </div>
                                 <div class="product-price">
                                     $20
@@ -362,7 +383,62 @@
                             </div>
                         </a>
                         
-                  
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                            <div class="clothing-image">
+                                <img src="../images/product/nike1.webp" alt="Image not found" class="product-img"/>
+                            </div>
+                            <div class="product-info">
+                                <div class="brand-label">
+                                    Nike
+                                </div>
+                                <div class="product-label">
+                                    Printed SWOOSH Run Sweatshirt
+                                </div>
+                                <div class="product-price">
+                                    $58
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                      
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                            <div class="clothing-image">
+                                <img src="../images/product/h&m2.webp" alt="Image not found" class="product-img"/>
+                            </div>
+                            <div class="product-info">
+                                <div class="brand-label">
+                                    H & M
+                                </div>
+                                <div class="product-label">
+                                    Women Formal Blazer
+                                </div>
+                                <div class="product-price">
+                                    $52
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                        
+                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                            <div class="clothing-image">
+                                <img src="../images/product/roadster3.webp" alt="Image not found" class="product-img"/>
+                            </div>
+                            <div class="product-info">
+                                <div class="brand-label">
+                                    Roadster
+                                </div>
+                                <div class="product-label">
+                                    Women Skinny Fit Crop Jeans
+                                </div>
+                                <div class="product-price">
+                                    $28 <sub class="text-muted"><del>$35</del></sub>
+                                </div>
+                            </div>
+                            </div>
+                        </a>
+                        
+                        
+                        
                     </div>
                 </div> 
             </div>
@@ -386,11 +462,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="men.html" class="footer-link">Men</a></li>
-                            <li><a href="women.html" class="footer-link">Women</a></li>
-                            <li><a href="kids.html" class="footer-link">Kids</a></li>
-                            <li><a href="collections.html" class="footer-link">Collections</a></li>
-                            <li><a href="new_arrivals.html" class="footer-link">New Arrivals</a></li>
+                            <li><a href="men.php" class="footer-link">Men</a></li>
+                            <li><a href="women.php" class="footer-link">Women</a></li>
+                            <li><a href="kids.php" class="footer-link">Kids</a></li>
+                            <li><a href="collections.php" class="footer-link">Collections</a></li>
+                            <li><a href="new_arrivals.php" class="footer-link">New Arrivals</a></li>
                         </ul>
                     </div>
                 </div>
@@ -401,11 +477,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="profile.html" class="footer-link">Account</a></li>
-                            <li><a href="orders.html" class="footer-link">Orders</a></li>
-                            <li><a href="wishlist.html" class="footer-link">Wishlist</a></li>
-                            <li><a href="cart.html" class="footer-link">Shopping Bag</a></li>
-                            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                            <li><a href="profile.php" class="footer-link">Account</a></li>
+                            <li><a href="orders.php" class="footer-link">Orders</a></li>
+                            <li><a href="wishlist.php" class="footer-link">Wishlist</a></li>
+                            <li><a href="cart.php" class="footer-link">Shopping Bag</a></li>
+                            <li><a href="contact.php" class="footer-link">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
