@@ -103,23 +103,23 @@
                             <form class="form-box" action="index.php">
                                 <div class="form-group">
                                     <label class="required-field">Username</label><br/>
-                                    <input type="text" class="form-control input-lg" id="username" value="Vrushank" required/><br/>
+                                    <input type="text" class="form-control input-lg" id="username"  required/><br/>
                                 </div>
                                 <div class="form-group">
                                     <label class="required-field">Email</label><br/>
-                                    <input type="email" class="form-control input-lg" id="email" value="vrushank@gmail.com" required/><br/>
+                                    <input type="email" class="form-control input-lg" id="email"  required/><br/>
                                 </div>
                                 <div class="form-group">
                                     <label class="required-field">password</label><br/>
-                                    <input type="password" class="form-control input-lg" id="password" value="vrushank" required/><br/>
+                                    <input type="password" class="form-control input-lg" id="password"  required/><br/>
                                 </div>
                                 <div class="form-group">
                                     <label class="required-field">Mobile Number</label><br/>
-                                    <input type="number" class="form-control input-lg" id="mobile" value="7777777777"required/><br/>
+                                    <input type="number" class="form-control input-lg" id="mobile" required/><br/>
                                 </div>
                                 <div class="form-group">
                                     <label class="required-field">Date of birth</label><br/>
-                                    <input type="date" class="form-control input-lg" id="dob" value="1999-01-27" required/>
+                                    <input type="date" class="form-control input-lg" id="dob"  required/>
                                 </div>
                                 <br/>
                                 <div class="form-group">
