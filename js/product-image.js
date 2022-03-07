@@ -20,10 +20,10 @@ function setImgSource(source){
     var url = window.location.href;
     var arr = url.split("/");
     var result = arr[0] + "//" + arr[2];
-   
+    
     for(var i=0;i<imagesArray.length;i++){
-        
-        if(result +"/images/product/"+ imagesArray[i] == source){
+        var checkImg = result +"/OneStop/images/product/"+ imagesArray[i];
+        if(checkImg == source){
             imgIndex = i;
         }
     }
