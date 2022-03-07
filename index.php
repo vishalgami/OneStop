@@ -6,6 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script src="./js/header.js"></script>
         <script src="./js/product.js"></script>
@@ -16,13 +17,11 @@
         <div class="container-fluid">
             
             <!--Header-->
-            <?php 
-                include("pages/header.php")
-            ?>
-<<<<<<< Updated upstream:index.php
-=======
-            <!-- <div class="header">
-                <ul class="left-menu" type="none">
+
+
+
+            <div class="header">
+             <ul class="left-menu" type="none">
                     <li class="logo">
                         <a href="index.php">
                             <img src="images/One1.png" alt="logo not found" title="logo" class="logo-img">
@@ -92,8 +91,9 @@
                     </li>
                 </ul>
             </div>
-            <br/> -->
->>>>>>> Stashed changes:index.html
+
+            <br/>
+
             <!-- End of header -->
            
             <!--Banner-->
@@ -338,7 +338,47 @@
             
             
             <!--footer-->
-            <?php include("pages/footer.php");?>
+            <div class="row footer">
+                <div class="col footer-column">
+                    <div class="footer-main-heading">
+                        OneStop
+                    </div>
+                    
+                    <div class="footer-content">
+                        If you would like to experience the best of online shopping for men, women and kids, you are at the right place. OneStop is the ultimate destination for fashion and lifestyle. It is time to redefine your style statement with our treasure-trove of trendy items.
+                    </div>
+                </div>
+                <div class="col footer-column">
+                    <div class="footer-heading">
+                        Shop By
+                    </div>
+                    <br/>
+                    <div class="footer-links">
+                        <ul type="none">
+                            <li><a href="pages/men.php" class="footer-link">Men</a></li>
+                            <li><a href="pages/women.php" class="footer-link">Women</a></li>
+                            <li><a href="pages/kids.php" class="footer-link">Kids</a></li>
+                            <li><a href="pages/collections.php" class="footer-link">Collections</a></li>
+                            <li><a href="pages/new_arrivals.php" class="footer-link">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col footer-column">
+                    <div class="footer-heading">
+                        Useful Links
+                    </div>
+                    <br/>
+                    <div class="footer-links">
+                        <ul type="none">
+                            <li><a href="pages/profile.php" class="footer-link">Account</a></li>
+                            <li><a href="pages/orders.php" class="footer-link">Orders</a></li>
+                            <li><a href="pages/wishlist.php" class="footer-link">Wishlist</a></li>
+                            <li><a href="pages/cart.php" class="footer-link">Shopping Bag</a></li>
+                            <li><a href="pages/contact.php" class="footer-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!--End of footer-->
         </div>
     </body>
