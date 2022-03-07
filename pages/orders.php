@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
         <link rel="stylesheet" type="text/css" href="../css/orders.css">
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
         <script src="../js/jquery-3.6.0.min.js"></script>
         <script src="../js/header.js"></script>
     </head>
@@ -102,50 +103,8 @@
                 </div>
             </div>
             <!--End of orders page-->
-            <!--footer-->
-            <div class="footer-parent">
-                <div class="row footer">
-                    <div class="col footer-column">
-                         <div class="footer-main-heading">
-                            OneStop
-                        </div>
-
-                        <div class="footer-content">
-                            If you would like to experience the best of online shopping for men, women and kids, you are at the right place. OneStop is the ultimate destination for fashion and lifestyle. It is time to redefine your style statement with our treasure-trove of trendy items. 
-                        </div>
-                    </div>
-                    <div class="col footer-column">
-                        <div class="footer-heading">
-                            Shop By
-                        </div>
-                        <br/>
-                        <div class="footer-links">
-                            <ul type="none">
-                                <li><a href="men.php" class="footer-link">Men</a></li>
-                                <li><a href="women.php" class="footer-link">Women</a></li>
-                                <li><a href="kids.php" class="footer-link">Kids</a></li>
-                                <li><a href="collections.php" class="footer-link">Collections</a></li>
-                                <li><a href="new_arrivals.php" class="footer-link">New Arrivals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col footer-column">
-                        <div class="footer-heading">
-                            Useful Links
-                        </div>
-                        <br/>
-                        <div class="footer-links">
-                            <ul type="none">
-                                <li><a href="profile.php" class="footer-link">Account</a></li>
-                                <li><a href="orders.php" class="footer-link">Orders</a></li>
-                                <li><a href="wishlist.php" class="footer-link">Wishlist</a></li>
-                                <li><a href="cart.php" class="footer-link">Shopping Bag</a></li>
-                                <li><a href="contact.php" class="footer-link">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <!--footer-->
+           <?php include("footer.php");?>
             <!--End of footer-->
         </div>
     </body>

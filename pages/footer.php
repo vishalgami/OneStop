@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    
 </head>
 <body>
     <!--footer-->
@@ -28,11 +28,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="pages/men.php" class="footer-link">Men</a></li>
-                            <li><a href="pages/women.php" class="footer-link">Women</a></li>
-                            <li><a href="pages/kids.php" class="footer-link">Kids</a></li>
-                            <li><a href="pages/collections.php" class="footer-link">Collections</a></li>
-                            <li><a href="pages/new_arrivals.php" class="footer-link">New Arrivals</a></li>
+                            <li><a href="men.php" class="footer-link">Men</a></li>
+                            <li><a href="women.php" class="footer-link">Women</a></li>
+                            <li><a href="kids.php" class="footer-link">Kids</a></li>
+                            <li><a href="collections.php" class="footer-link">Collections</a></li>
+                            <li><a href="new_arrivals.php" class="footer-link">New Arrivals</a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,11 +43,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="pages/profile.php" class="footer-link">Account</a></li>
-                            <li><a href="pages/orders.php" class="footer-link">Orders</a></li>
-                            <li><a href="pages/wishlist.php" class="footer-link">Wishlist</a></li>
-                            <li><a href="pages/cart.php" class="footer-link">Shopping Bag</a></li>
-                            <li><a href="pages/contact.php" class="footer-link">Contact Us</a></li>
+                            <li><a href="profile.php" class="footer-link">Account</a></li>
+                            <li><a href="orders.php" class="footer-link">Orders</a></li>
+                            <li><a href="wishlist.php" class="footer-link">Wishlist</a></li>
+                            <li><a href="cart.php" class="footer-link">Shopping Bag</a></li>
+                            <li><a href="contact.php" class="footer-link">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
