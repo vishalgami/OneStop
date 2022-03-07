@@ -15,15 +15,15 @@
             <div class="header">
                 <ul class="left-menu" type="none">
                     <li class="logo">
-                        <a href="../index.html">
+                        <a href="../index.php">
                             <img src="../images/One1.png" alt="logo not found" title="logo" class="logo-img">
                         </a>
                     </li>
-                    <li><a href="men.html" class="header-link">Men</a></li>
-                    <li><a href="women.html" class="header-link">Women</a></li>
-                    <li><a href="kids.html" class="header-link">Kids</a></li>
-                    <li><a href="collections.html" class="header-link">Collections</a></li>
-                    <li><a href="new_arrivals.html" class="header-link">New Arrivals</a></li>
+                    <li><a href="men.php" class="header-link">Men</a></li>
+                    <li><a href="women.php" class="header-link">Women</a></li>
+                    <li><a href="kids.php" class="header-link">Kids</a></li>
+                    <li><a href="collections.php" class="header-link">Collections</a></li>
+                    <li><a href="new_arrivals.php" class="header-link">New Arrivals</a></li>
                 </ul>
                 <ul class="search-bar-menu" type="none">
                     <li>
@@ -43,22 +43,22 @@
                                     <div class="profile-dropdown-content">
                                         <b>Welcome</b><br/>
                                         <div class="text-muted">Access your account and manage orders</div><br/>
-                                        <a href="signin.html">
+                                        <a href="signin.php">
                                             <button type="button" class="btn btn-danger login-btn">Sign In</button>
                                         </a><br/>
-                                        <a href="signup.html" class="signup-link">Not connected yet ? Signup here !</a>
+                                        <a href="signup.php" class="signup-link">Not connected yet ? Signup here !</a>
                                         <hr/>
-                                        <a href="profile.html" class="profile-links">Account</a>
-                                        <a href="orders.html" class="profile-links">Orders</a>
-                                        <a href="wishlist.html" class="profile-links">Wishlist</a>
-                                        <a href="contact.html" class="profile-links">Contact Us</a>
+                                        <a href="profile.php" class="profile-links">Account</a>
+                                        <a href="orders.php" class="profile-links">Orders</a>
+                                        <a href="wishlist.php" class="profile-links">Wishlist</a>
+                                        <a href="contact.php" class="profile-links">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="wishlist.html" class="header-link">
+                        <a href="wishlist.php" class="header-link">
                             <div class="header-icon ">
                                 <div>
                                     <i class="fa fa-heart-o" style="color:deeppink;"></i>
@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="cart.html" class="header-link">
+                        <a href="cart.php" class="header-link">
                             <div class="header-icon ">
                                 <div>
                                     <i class="fa fa-shopping-bag" style="color:red;"></i>
@@ -129,8 +129,8 @@
                         <span class="product-size">XL</span>
                     </div><br/>
                     <div class="product-btn">
-                        <a href="cart_items.html"><button type="button" class="product-cart" onclick="addCart()"><i class="fa fa-shopping-bag" style="color:#fff;"></i>   ADD TO CART</button></a>
-                        <a href="wishlist_items.html"><button type="button" class="product-wishlist" onclick="addList()"> <i class="fa fa-heart-o" style="color:#000;"></i>   WISHLIST</button></a>
+                        <a href="cart_items.php"><button type="button" class="product-cart" onclick="addCart()"><i class="fa fa-shopping-bag" style="color:#fff;"></i>   ADD TO CART</button></a>
+                        <a href="wishlist_items.php"><button type="button" class="product-wishlist" onclick="addList()"> <i class="fa fa-heart-o" style="color:#000;"></i>   WISHLIST</button></a>
                     </div>
                     <hr/>
                     <div class="product-details">
@@ -172,11 +172,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="men.html" class="footer-link">Men</a></li>
-                            <li><a href="women.html" class="footer-link">Women</a></li>
-                            <li><a href="kids.html" class="footer-link">Kids</a></li>
-                            <li><a href="collections.html" class="footer-link">Collections</a></li>
-                            <li><a href="new_arrivals.html" class="footer-link">New Arrivals</a></li>
+                            <li><a href="men.php" class="footer-link">Men</a></li>
+                            <li><a href="women.php" class="footer-link">Women</a></li>
+                            <li><a href="kids.php" class="footer-link">Kids</a></li>
+                            <li><a href="collections.php" class="footer-link">Collections</a></li>
+                            <li><a href="new_arrivals.php" class="footer-link">New Arrivals</a></li>
                         </ul>
                     </div>
                 </div>
@@ -187,11 +187,11 @@
                     <br/>
                     <div class="footer-links">
                         <ul type="none">
-                            <li><a href="profile.html" class="footer-link">Account</a></li>
-                            <li><a href="orders.html" class="footer-link">Orders</a></li>
-                            <li><a href="wishlist.html" class="footer-link">Wishlist</a></li>
-                            <li><a href="cart.html" class="footer-link">Shopping Bag</a></li>
-                            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                            <li><a href="profile.php" class="footer-link">Account</a></li>
+                            <li><a href="orders.php" class="footer-link">Orders</a></li>
+                            <li><a href="wishlist.php" class="footer-link">Wishlist</a></li>
+                            <li><a href="cart.php" class="footer-link">Shopping Bag</a></li>
+                            <li><a href="contact.php" class="footer-link">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,8 @@
+[06-Feb-2021 11:37:32 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 1
+[06-Feb-2021 11:37:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 107
+[06-Feb-2021 11:37:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 109
+[06-Feb-2021 11:37:32 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, bool given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 123
+[17-Feb-2021 00:45:51 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 1
+[17-Feb-2021 00:45:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 107
+[17-Feb-2021 00:45:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 109
+[17-Feb-2021 00:45:51 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, bool given in /home/samarth/public_html/admin/add_product_csv/add_product_csv.php on line 123
