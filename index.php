@@ -20,8 +20,11 @@
 
 
 
+
+         
             <div class="header">
-             <ul class="left-menu" type="none">
+                <ul class="left-menu" type="none">
+
                     <li class="logo">
                         <a href="index.php">
                             <img src="images/One1.png" alt="logo not found" title="logo" class="logo-img">
@@ -93,7 +96,6 @@
             </div>
 
             <br/>
-
             <!-- End of header -->
            
             <!--Banner-->
