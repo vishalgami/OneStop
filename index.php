@@ -19,6 +19,81 @@
             <?php 
                 include("pages/header.php")
             ?>
+<<<<<<< Updated upstream:index.php
+=======
+            <!-- <div class="header">
+                <ul class="left-menu" type="none">
+                    <li class="logo">
+                        <a href="index.php">
+                            <img src="images/One1.png" alt="logo not found" title="logo" class="logo-img">
+                        </a>
+                    </li>
+                    <li><a href="pages/men.php" class="header-link">Men</a></li>
+                    <li><a href="pages/women.php" class="header-link">Women</a></li>
+                    <li><a href="pages/kids.php" class="header-link">Kids</a></li>
+                    <li><a href="pages/collections.php" class="header-link">Collections</a></li>
+                    <li><a href="pages/new_arrivals.php" class="header-link">New Arrivals</a></li>
+                </ul>
+                <ul class="search-bar-menu" type="none">
+                    <li class="search-bar-li">
+                        <form class="search-bar-form">
+                            <input type="text" class="search-bar" placeholder="Search for products,brands..." title="">
+                            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="right-menu" type="none">
+                    <li>
+                        <div class="profile-dropdown">
+                            <div class="header-icon ">
+                                <i class="fa fa-user-o" style="color:darkblue;"></i>
+                                <div class="header-icon-label">
+                                    Profile
+                                    <div class="profile-dropdown-content">
+                                        <b>Welcome</b><br/>
+                                        <div class="text-muted">Access your account and manage orders</div><br/>
+                                        <a href="pages/signin.php">
+                                            <button type="button" class="btn btn-danger login-btn">Sign In</button>
+                                        </a><br/>
+                                        <a href="pages/signup.php" class="signup-link">Not connected yet ? Signup here !</a>
+                                        <hr/>
+                                        <a href="pages/profile.php" class="profile-links">Account</a>
+                                        <a href="pages/orders.php" class="profile-links">Orders</a>
+                                        <a href="pages/wishlist.php" class="profile-links">Wishlist</a>
+                                        <a href="pages/contact.php" class="profile-links">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="pages/wishlist.php" class="header-link">
+                            <div class="header-icon ">
+                                <div>
+                                    <i class="fa fa-heart-o" style="color:deeppink;"></i>
+                                    <div class="header-icon-label">
+                                        Wishlist
+                                     </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/cart.php" class="header-link">
+                            <div class="header-icon ">
+                                <div>
+                                    <i class="fa fa-shopping-bag" style="color:red;"></i>
+                                    <div class="header-icon-label">
+                                        Bag
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br/> -->
+>>>>>>> Stashed changes:index.html
             <!-- End of header -->
            
             <!--Banner-->
