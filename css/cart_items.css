@@ -1,4 +1,3 @@
-
 .main-container {
     min-height:100%;
     /* will cover the 100% of viewport */
@@ -15,19 +14,16 @@ footer-parent{
     bottom: 0;
     width: 100%;
 }
-
 .cart-section{
     margin:30px 180px 118px 180px;
     padding:0 20px 20px 20px;
 }
-
 .cart-item-title{
     
     font-size:23px;
     margin-bottom:10px;
     font-weight:400;
 }
-
 .cart-item-price{
     padding-top:15px;
     padding-left:30px;
@@ -36,73 +32,60 @@ footer-parent{
     border-right:1px solid #ccc;
     padding-right: 30px;
 }
-
 .cart-item{
     border:1px solid #ccc;
     border-radius:5px;
     padding:18px;
     margin-bottom: 10px;
 }
-
 .cart-item-table{
     width:100%;
     
 }
-
 .product-image{
    width:160px;
 }
-
 .product-details{
     padding-top:10px;
     vertical-align:top;
 }
-
 .product-retail-price{
     padding-top:28px;
     vertical-align: top;
 }
-
 .product-quantity{
     padding-top:28px;
     vertical-align: top;
 }
-
 .product-img{
     padding:5px;
     height:160px;
     width:150px;
     object-fit:contain;
 }
-
 .product-title{
     font-weight:500;
     font-size:15px;
 }
-
 .product-subtitle{
     color:#282D3F; 
     font-weight:300;
     font-size:13px;
 }
-
 .product-sidebar-title{
     margin-bottom:15px;
     font-size:16px;
 }
-
 .sidebar-product-price{
     color:#282D3F; 
     font-weight:300;
     font-size:14px;
 }
-
 .sidebar-product-totalprice{
     color:#282D3F; 
     font-weight:500;
     font-size:15px;
 }
-
 .product-price{
     float:right;
 }
@@ -110,11 +93,9 @@ footer-parent{
     float:right;
     color:#66BFA7;
 }
-
 .place-order-button{
     margin-top:20px;
 }
-
 .place-order-btn{
     font-size:12px;
     width:100%;
@@ -125,39 +106,32 @@ footer-parent{
     border:none;
     background-color: crimson;
 }
-
 .cartitem-remove-btn{
     text-align: center;
     font-weight:300px;
     font-size:13px;
     border-right: 1px solid #686C79;
 }
-
 .cartitem-remove-link{
     text-decoration: none;
     color:#686C79;
 }
-
 .cartitem-remove-link:hover{
     color:#282D3F; 
 }
-
 .cartitem-wishlist-btn{
     text-align:left;
     font-weight:300px;
     font-size:13px;
     margin-left:50px;
 }
-
 .cartitem-wishlist{
     text-decoration: none;
     color:#686C79;
 }
-
 .cartitem-wishlist:hover{
     color:#282D3F; 
 }
-
 @media only screen and (max-width:2100px){
     .cart-section{
 /*    margin:30px 180px 0 180px;*/
@@ -201,7 +175,6 @@ footer-parent{
         border-right: none;
         padding-right: 30px;
     }
-
     .footer {
     
         position: relative !important;

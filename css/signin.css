@@ -11,7 +11,6 @@ body{
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
-
 }
 .right-menu{
     margin:11px 40px 10px 0 !important;
@@ -26,7 +25,6 @@ body{
     content: "*";
     color: red;
 }
-
 .signin-img{
     object-fit: contain;
     height:600px;
@@ -34,7 +32,6 @@ body{
     margin-left:100px;
     
 }
-
 .signin{
     margin:0;
     padding:0;
@@ -47,24 +44,20 @@ body{
     margin-top:100px;
     margin-left:100px;
 }
-
 .form-control{
 /*    width:480px;*/
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #notify{
     color:red;
     vertical-align: super;
     margin-left:15px;
     font-size:15px;
 }
-
 @media only screen and (max-width:600px){
     .form-container{
         margin-left: 0;

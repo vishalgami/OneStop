@@ -1,42 +1,36 @@
 <html>
 
-    <head>
-        <title>OneStop - Women</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/products.css">
-        <link rel="stylesheet" type="text/css" href="../css/footer.css">
-        <script src="../js/jquery-3.6.0.min.js"></script>
-        <script src="../js/header.js"></script>
-        <script src="../js/product.js"></script>
-        <script src="../js/filter.js"></script>
-    </head>
- 
+<head>
+    <title>OneStop - Women</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/products.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/filter.js"></script>
+</head>
+
 <body>
     <div class="container-fluid">
-
         <!--Header-->
         <?php
         include("header.php")
         ?>
         <!-- End of header -->
-
         <!--Products section-->
         <div class="row mens">
             <div class="mens-header">
                 <div class="mens-title">
                     Women
                 </div>
-
                 <div class="filter-main-title">
                     FILTERS
                 </div>
-
             </div>
-
         </div>
-
         <div class="row mens-content">
             <div class="col-lg-2 filter-section-body">
                 <div class="filter-section">
@@ -74,7 +68,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="filter-section">
                     <div class="filter-title" id="brand-title">
                         Brand <span id="plus"><i class="fa fa-angle-down"></i></span>
@@ -121,9 +114,7 @@
                             <label class="form-check-label text-muted filter-label" for="gap">Roadster</label>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="filter-section">
                     <div class="filter-title" id="price-title">
                         Price <span id="plus"><i class="fa fa-angle-down"></i></span>
@@ -152,10 +143,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md clothing">
                 <div class="clothing-grid-container">
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -174,7 +163,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -193,7 +181,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -212,7 +199,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -231,7 +217,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -250,7 +235,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -269,7 +253,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -288,7 +271,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -307,7 +289,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -326,7 +307,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -345,7 +325,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -364,7 +343,6 @@
                             </div>
                         </div>
                     </a>
-
                     <a href="subproduct.php" target="_blank" class="product-link">
                         <div class="clothing-grid-item">
                             <div class="clothing-image">
@@ -383,19 +361,13 @@
                             </div>
                         </div>
                     </a>
-
-
-
                 </div>
             </div>
-
             <!--End of products section-->
-            
             <!--footer-->
-            <?php include("footer.php");?>
+            <?php include("footer.php"); ?>
             <!--End of footer-->
-
-    </div>
+        </div>
 </body>
 
 </html>

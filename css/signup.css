@@ -25,14 +25,12 @@ body{
     content: "*";
     color: red;
 }
-
 .signup-img{
     object-fit: contain;
     height:600px;
     width:100%;
     
 }
-
 .signup{
     margin:0;
     padding:0;
@@ -44,24 +42,20 @@ body{
     padding:20px;
 /*    border-radius:2%;*/   
 }
-
 .form-control{
 /*    width:480px;*/
 }
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #notify{
     color:red;
     vertical-align: super;
     margin-left:15px;
     font-size:15px;
 }
-
 @media only screen and (max-width:600px){
     .form-container{
         margin-left: 0;

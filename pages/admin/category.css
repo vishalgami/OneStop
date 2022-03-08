@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ubuntu:400,500,700&display=swap');
-
 *{
   margin: 0;
   padding: 0;
@@ -8,40 +7,30 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
 body{
   background: #f1f1f1;
   width: 100%;
   height: 100%;
 }
-
-
 .table{
   width: 100%;
   border-collapse: collapse;
   
 }
-
 .table td,.table th{
   padding:12px 15px;
   border:1px solid #ddd;
   text-align: center;
   font-size:16px;
   
-
 }
-
 .table th{
   background-color: #1061b3;
   color:#fff;
-
 }
-
 .table tbody tr{
   background-color: #fff;
-
 }
-
 /*responsive*/
 @media(max-width: 600px){
     img{
@@ -56,12 +45,9 @@ body{
   }
 @media(max-width: 500px){
   
-
   .table thead{
     display: none;
-
   }
-
    .table tbody{
      background-color:#f1f1f1;
     max-width:none;
@@ -96,7 +82,6 @@ body{
     text-align: left;
   }
 }
-
 .wrapper .top_navbar{
   width: 100%;
   height: 65px;
@@ -118,19 +103,15 @@ body{
   display: flex;
   position: relative;
   top: 0;
-
   }
-
 .wrapper.active .top_navbar .logo{
   width: 250px;
   height: 100%;
   background: #2e4ead;
   border-bottom: 1px solid #d3d3d3;
 }
-
 .wrapper.active .top_navbar .logo a{
   display: block;
-
     text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
@@ -153,15 +134,12 @@ body{
   .container{
   margin-bottom:50px;
   }
-
   .main_body .sidebar_menu{
       position: relative;
       width: 100%;
       height: auto;
-
       
   }
-
   .main_body .sidebar_menu .inner__sidebar_menu{
      width: 100%;
      height: auto;
@@ -169,21 +147,14 @@ body{
     position: relative;
     
   }
-
  
-
   .main_body .sidebar_menu ul li a{
     float:left;
   }
-
   .main_body .container{
-
       margin-left:0px;
-
   }
 }
-
-
 .wrapper .top_navbar .logo{
   width: 250px;
   height: 100%;
@@ -191,10 +162,8 @@ body{
   background:#fff;
   border-bottom: 1px solid #d3d3d3;
 }
-
 .wrapper .top_navbar .logo a{
   display: block;
-
     text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
@@ -204,7 +173,6 @@ body{
 .wrapper .top_navbar .logo a:hover{
  text-decoration: none;
   background: #4360b5;
-
 }
 .wrapper .top_navbar .top_menu{
   width: calc(100% - 250px);
@@ -219,8 +187,6 @@ body{
  -moz-box-shadow:0px 2px 2px #d3d3d3;
  box-shadow:0px 2px 2px #d3d3d3;
 }
-
-
 .wrapper .top_navbar .top_menu .home_link a{
   display: block;
     background: #3421C0;
@@ -228,17 +194,14 @@ body{
     
     border-radius: 3px;
 }
-
 .wrapper .top_navbar .top_menu  a:hover,
 .wrapper .top_navbar .right_info .icon_wrap:hover {
     background: #4360b5;
 }
-
 .wrapper .top_navbar .right_info{
   display: flex;
   font-size:15px;
 }
-
 .wrapper .top_navbar .right_info .icon_wrap{
   padding: 8px 15px;
     border-radius: 3px;
@@ -247,7 +210,6 @@ body{
     margin: 0 5px;
     cursor: pointer;
 }
-
 .main_body .sidebar_menu{
   position: fixed;
     top: 65px;
@@ -258,13 +220,11 @@ body{
     height: 100%;
     transition: all 0.3s linear;
 }
-
 .main_body .sidebar_menu .inner__sidebar_menu{
   text-decoration: none;
   position: relative;
   padding-top: 60px;
 }
-
 .main_body .sidebar_menu ul li a{
   
   color: #fff;
@@ -274,7 +234,6 @@ body{
   display: block;
   white-space: nowrap;
 }
-
 .main_body .sidebar_menu ul li a .icon{
   margin-right: 8px;
 }
@@ -285,20 +244,15 @@ height:40px;
 .main_body .sidebar_menu ul li a span{
   display: inline-block;
 }
-
-
 .main_body .sidebar_menu ul li a:hover{
   
   background:#4360b5;
   color: #fff;
 }
-
 .main_body .sidebar_menu ul li a.active{
   background: #4360b5;
   color: #fff;
-
 }
-
 .main_body .sidebar_menu .toggleArrow{
   position: absolute;
   top: 5px;
@@ -308,9 +262,7 @@ height:40px;
   background: #e8edf5;
   border-radius: 50%;
   cursor: pointer;
-
 }
-
 .main_body .sidebar_menu .inner_toggleArrow,
 .main_body .sidebar_menu .toggleArrow .arrow{
   position: absolute;
@@ -318,23 +270,19 @@ height:40px;
   left: 50%;
   transform: translate(-50%,-50%);
 }
-
 .main_body .sidebar_menu .inner_toggleArrow{
   width: 40px;
   border-radius: 50%;
   height: 40px;
   background: #3421C0;
 }
-
 .main_body .sidebar_menu .toggleArrow .arrow{
   color: #fff;
   font-size: 20px;
 }
-
 .main_body .sidebar_menu .toggleArrow  .fa-long-arrow-alt-right{
   display: none;
 }
-
 .main_body .container{
   width: 100%;
   margin-top: 65px;
@@ -342,13 +290,10 @@ height:40px;
   padding: 25px 30px;
   transition: all 0.3s linear;
 }
-
 .main_body .container .item_wrap{
   display: flex;
   margin-bottom: 20px;
-
 }
-
 .main_body .container .item_wrap .item{
   background: #fff;
   border-radius:25px;
@@ -359,35 +304,26 @@ height:40px;
   line-height: 22px;
   
 }
-
-
-
 .main_body .container .item_wrap .item:first-child{
   margin-right: 20px;
 }
-
 /* after adding active class */
 .wrapper.active .sidebar_menu{
   width: 100px;
 }
-
 .wrapper.active .toggleArrow .fa-long-arrow-alt-right{
   display: block;
 }
-
 .wrapper.active .toggleArrow .fa-long-arrow-alt-left{
   display: none;
 }
-
 .wrapper.active .sidebar_menu ul li a .list{
   display: none;
 }
-
 .wrapper.active .main_body .container{
   width: 100% ;
   margin-left: 100px;
 }
-
 .dropbtn {
   background-color:#2e4ead ;
   color: white;
@@ -395,12 +331,10 @@ height:40px;
   font-size: 16px;
   border: none;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -410,7 +344,6 @@ height:40px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
 .dropdown-content a {
   color: black;
   border-radius:15px;
@@ -418,16 +351,13 @@ height:40px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #fff;
   border-radius:15px;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .dropdown:hover .dropbtn {
   background-color: #2e4ead;
 }
@@ -435,7 +365,6 @@ height:40px;
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
@@ -445,12 +374,10 @@ height:40px;
 ::-webkit-scrollbar-thumb {
   background: #888; 
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-
 .main-div{
   width:200px;
   float:left;
@@ -458,7 +385,6 @@ height:40px;
   padding:20px;
   margin:0px auto;
 }
-
 .main-div input{
     display:block;
     border:1px solid #ccc;
@@ -468,12 +394,10 @@ height:40px;
     outline:none;
     width:350px;
     margin-bottom:20px;
-
 }
 .main-div input:focus {
   border: 1px solid #777;
 }
-
 .upload-btn-wrapper {
   float:left; 
   position: relative;
@@ -496,4 +420,3 @@ height:40px;
   top: 0;
   opacity: 0;
 }
-

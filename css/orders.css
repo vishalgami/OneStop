@@ -29,7 +29,6 @@ body{
     position: relative;
     /* height of your footer */
    /* padding-bottom: 100px; */
-
 }
 footer-parent{
     position: relative;
@@ -63,14 +62,12 @@ footer-parent{
     font-size:20px;
     cursor: default;
 }
-
 .orders-subtitles{
     color:#8E9298;
     font-size:15px;
     font-weight:200;
     cursor: default;
 }
-
 .orders-btn{
 /*    margin-top:10px;*/
     font-size: 15px;

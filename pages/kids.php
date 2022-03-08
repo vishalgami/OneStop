@@ -1,176 +1,168 @@
 <html>
-    <head>
-        <title>OneStop - Kids</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../css/products.css">
-        <link rel="stylesheet" type="text/css" href="../css/footer.css">
-        <script src="../js/jquery-3.6.0.min.js"></script>
-        <script src="../js/filter.js"></script>
-        <script src="../js/product.js"></script>
-        <script src="../js/header.js"></script>
-    </head>
-    <body>
-        <div class="container-fluid">
-            
-            <!--Header-->
-            <?php 
-                include("header.php")
-            ?>
-            <!-- End of header -->
-            
-            <!--products section-->
-            <div class="row mens">
-                <div class="mens-header">
-                    <div class="mens-title">
-                        Kids
-                    </div>
-                  
-                    <div class="filter-main-title">
-                        FILTERS
-                    </div>
+
+<head>
+    <title>OneStop - Kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/products.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/header.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Header-->
+        <?php
+        include("header.php")
+        ?>
+        <!-- End of header -->
+        <!--products section-->
+        <div class="row mens">
+            <div class="mens-header">
+                <div class="mens-title">
+                    Kids
                 </div>
-                
+                <div class="filter-main-title">
+                    FILTERS
+                </div>
             </div>
-            
-            <div class="row mens-content">
-                <div class="col-lg-2 filter-section-body">
-                    <div class="filter-section">
-                        <div class="filter-title" id="category-title">
-                             Categories  <span id="plus"><i class="fa fa-angle-down"></i></span>
-                        </div>
-                        <div id="category-options">
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="shirt"/>
-                                <label class="form-check-label text-muted filter-label" for="shirt">Shirts</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="jeans"/>
-                                <label class="form-check-label text-muted filter-label" for="jeans">Jeans</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="tshirts"/>
-                                <label class="form-check-label text-muted filter-label" for="tshirts">T-Shirts</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="jackets"/>
-                                <label class="form-check-label text-muted filter-label" for="jackets">Jackets</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="sweatshirts"/>
-                                <label class="form-check-label text-muted filter-label" for="sweatshirts">Sweatshirts</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="suits"/>
-                                <label class="form-check-label text-muted filter-label" for="suits">Shorts</label>
-                            </div>
-                        </div>
+        </div>
+        <div class="row mens-content">
+            <div class="col-lg-2 filter-section-body">
+                <div class="filter-section">
+                    <div class="filter-title" id="category-title">
+                        Categories <span id="plus"><i class="fa fa-angle-down"></i></span>
                     </div>
-                    
-                    <div class="filter-section">
-                        <div class="filter-title" id="brand-title">
-                             Brand  <span id="plus"><i class="fa fa-angle-down"></i></span>
+                    <div id="category-options">
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="shirt" />
+                            <label class="form-check-label text-muted filter-label" for="shirt">Shirts</label>
                         </div>
-                        <div id="brand-options">
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="ucb"/>
-                                <label class="form-check-label text-muted filter-label" for="ucb">United Colors of Benetton</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="puma"/>
-                                <label class="form-check-label text-muted filter-label" for="puma">Puma</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="adidas"/>
-                                <label class="form-check-label text-muted filter-label" for="adidas">Adidas</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="nike"/>
-                                <label class="form-check-label text-muted filter-label" for="nike">Nike</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="max"/>
-                                <label class="form-check-label text-muted filter-label" for="max">Max</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="hm"/>
-                                <label class="form-check-label text-muted filter-label" for="hm">H & M</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="gap"/>
-                                <label class="form-check-label text-muted filter-label" for="gap">GAP</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Pepe Jeans</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Cutiekins</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="park-avenue"/>
-                                <label class="form-check-label text-muted filter-label" for="park-avenue">Quechua</label>
-                            </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="jeans" />
+                            <label class="form-check-label text-muted filter-label" for="jeans">Jeans</label>
                         </div>
-                        
-                        
-                    </div>
-                    
-                    <div class="filter-section">
-                        <div class="filter-title" id="price-title">
-                             Price  <span id="plus"><i class="fa fa-angle-down"></i></span>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="tshirts" />
+                            <label class="form-check-label text-muted filter-label" for="tshirts">T-Shirts</label>
                         </div>
-                        <div id="price-options">
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="ucb"/>
-                                <label class="form-check-label text-muted filter-label" for="ucb">Under $25</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="jeans"/>
-                                <label class="form-check-label text-muted filter-label" for="jeans">$25 to $50</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="tshirts"/>
-                                <label class="form-check-label text-muted filter-label" for="tshirts">$50 to $100</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="jackets"/>
-                                <label class="form-check-label text-muted filter-label" for="jackets">$100 to $200</label>
-                            </div>
-                            <div class="filter-options">
-                                <input type="checkbox" class="form-check-input" id="sweatshirts"/>
-                                <label class="form-check-label text-muted filter-label" for="sweatshirts">$200 & Above</label>
-                            </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="jackets" />
+                            <label class="form-check-label text-muted filter-label" for="jackets">Jackets</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="sweatshirts" />
+                            <label class="form-check-label text-muted filter-label" for="sweatshirts">Sweatshirts</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="suits" />
+                            <label class="form-check-label text-muted filter-label" for="suits">Shorts</label>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md clothing">
-                    <div class="clothing-grid-container">
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                <div class="filter-section">
+                    <div class="filter-title" id="brand-title">
+                        Brand <span id="plus"><i class="fa fa-angle-down"></i></span>
+                    </div>
+                    <div id="brand-options">
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="ucb" />
+                            <label class="form-check-label text-muted filter-label" for="ucb">United Colors of Benetton</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="puma" />
+                            <label class="form-check-label text-muted filter-label" for="puma">Puma</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="adidas" />
+                            <label class="form-check-label text-muted filter-label" for="adidas">Adidas</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="nike" />
+                            <label class="form-check-label text-muted filter-label" for="nike">Nike</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="max" />
+                            <label class="form-check-label text-muted filter-label" for="max">Max</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="hm" />
+                            <label class="form-check-label text-muted filter-label" for="hm">H & M</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="gap" />
+                            <label class="form-check-label text-muted filter-label" for="gap">GAP</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="park-avenue" />
+                            <label class="form-check-label text-muted filter-label" for="park-avenue">Pepe Jeans</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="park-avenue" />
+                            <label class="form-check-label text-muted filter-label" for="park-avenue">Cutiekins</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="park-avenue" />
+                            <label class="form-check-label text-muted filter-label" for="park-avenue">Quechua</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-title" id="price-title">
+                        Price <span id="plus"><i class="fa fa-angle-down"></i></span>
+                    </div>
+                    <div id="price-options">
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="ucb" />
+                            <label class="form-check-label text-muted filter-label" for="ucb">Under $25</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="jeans" />
+                            <label class="form-check-label text-muted filter-label" for="jeans">$25 to $50</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="tshirts" />
+                            <label class="form-check-label text-muted filter-label" for="tshirts">$50 to $100</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="jackets" />
+                            <label class="form-check-label text-muted filter-label" for="jackets">$100 to $200</label>
+                        </div>
+                        <div class="filter-options">
+                            <input type="checkbox" class="form-check-input" id="sweatshirts" />
+                            <label class="form-check-label text-muted filter-label" for="sweatshirts">$200 & Above</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md clothing">
+                <div class="clothing-grid-container">
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/pepe.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/pepe.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
                                     Pepe Jeans
                                 </div>
                                 <div class="product-label">
-                                    Boys Regular Fit Casual Shirt 
+                                    Boys Regular Fit Casual Shirt
                                 </div>
                                 <div class="product-price">
                                     $10 <sub class="text-muted"><del>$18</del></sub>
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/h&m3.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/h&m3.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -183,12 +175,12 @@
                                     $7
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/gap1.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/gap1.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -201,12 +193,12 @@
                                     $18 <sub class="text-muted"><del>$32</del></sub>
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/max2.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/max2.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -219,12 +211,12 @@
                                     $7
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/jacket.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/jacket.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -237,12 +229,12 @@
                                     $14 <sub class="text-muted"><del>$27</del></sub>
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/gap2.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/gap2.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -255,12 +247,12 @@
                                     $15 <sub class="text-muted"><del>$35</del></sub>
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/jacket1.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/jacket1.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -273,12 +265,12 @@
                                     $30 <sub class="text-muted"><del>$35</del></sub>
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                        <a href="subproduct.php" target="_blank" class="product-link"><div class="clothing-grid-item">
+                        </div>
+                    </a>
+                    <a href="subproduct.php" target="_blank" class="product-link">
+                        <div class="clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="../images/product/cutiekins.webp" alt="Image not found" class="product-img"/>
+                                <img src="../images/product/cutiekins.webp" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
@@ -291,18 +283,16 @@
                                     $20
                                 </div>
                             </div>
-                            </div>
-                        </a>
-                        
-                  
-                    </div>
-                </div> 
+                        </div>
+                    </a>
+                </div>
             </div>
-            <!--End of products section-->
-            
-           <!--footer-->
-           <?php include("footer.php");?>
-            <!--End of footer-->
         </div>
-    </body>
+        <!--End of products section-->
+        <!--footer-->
+        <?php include("footer.php"); ?>
+        <!--End of footer-->
+    </div>
+</body>
+
 </html>

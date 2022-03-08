@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     //mouseenter and mouseleave event to animate the header links 
     $(".header-link").mouseenter(function() {
         $(this).css({

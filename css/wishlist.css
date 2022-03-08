@@ -2,7 +2,6 @@ body{
     margin:0;
     padding:0;
     height:100%;
-
     /*Disable the text selection*/
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -65,14 +64,12 @@ footer-parent{
     font-size:23px;
     cursor: default;
 }
-
 .wishlist-subtitles{
     color:#8E9298;
     font-size:15px;
     font-weight:200;
     cursor: default;
 }
-
 .wishlist-btn{
     margin-top:30px;
     font-size: 15px;

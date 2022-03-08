@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Solid Round Neck T-shirt</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -18,7 +19,6 @@
         include("header.php")
         ?>
         <!-- End of header -->
-
         <!-- Product details section -->
         <div class="row product-main-section">
             <div class="col-lg-2 product-list">
@@ -27,27 +27,15 @@
                     <div id="image-list"></div>
                 </div>
                 <!--End of Image list-->
-
             </div>
             <div class="col-lg-4 product-image-slider">
-
                 <!--Main image preview section-->
-
-
                 <div id="main-img"></div>
-
                 <div class="navigation-button">
                     <button class="leftBtn" onclick="left()"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
-
                     <button class="rightBtn" onclick="right()"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
                 </div>
-
-
                 <!-- End of Main image preview section-->
-
-
-
-
             </div>
             <div class="col-lg-4 product-details-section">
                 <div class="product-brand">Puma</div>
@@ -62,9 +50,8 @@
                     <span class="product-size">L</span>
                     <span class="product-size">XL</span>
                 </div><br /><br>
-
                 <div class="product-size-title">Quantity</div>
-                <div class="product-quantity col-sm-3" >
+                <div class="product-quantity col-sm-3">
                     <select class="form-select">
                         <option value="1" selected>1</option>
                         <option value="2">2</option>
@@ -89,17 +76,12 @@
                             <li>Wash Care: <span class="specification-info">Machine Wash</span></li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
         </div>
-            
-            <!--footer-->
-            <?php include("footer.php");?>
-            <!--End of footer-->
-     
-
+        <!--footer-->
+        <?php include("footer.php"); ?>
+        <!--End of footer-->
     </div>
     <script src="../js/product-image.js"></script>
 </body>
