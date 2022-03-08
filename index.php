@@ -17,11 +17,6 @@
         <div class="container-fluid">
             
             <!--Header-->
-
-
-
-
-         
             <div class="header">
                 <ul class="left-menu" type="none">
 

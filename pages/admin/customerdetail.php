@@ -1,21 +1,3 @@
-<?php
-// session_start();
-// include("db_conx.php");
-
-
-
-// if(!isset($_SESSION["admin_id"]))
-
-// {
-
-//   header("location: ../signin.php");
-
-//   exit();
-
-// }
-
-?>
-
 <html>
 
 <head>
@@ -99,7 +81,7 @@
 
 						  	<a href="profile.php">My profile</a>
 
-						    <a href="logout_admin.php">Logout</a>
+						    <a href="../signin.php">Logout</a>
 
 
 
@@ -163,20 +145,6 @@
 
 		          </li>
 
-		           
-
-		          <!-- <li>
-
-		            <a href="dboydetail.php"  class="icon">
-
-		              <span class="icon"><i class="fas fa-shipping-fast"></i></span>
-
-		              <span class="list">Delivery Boy Details</span>
-
-		            </a>
-
-		          </li> -->
-
 		         <li>
 
 		            <a href="categories.php" title="Categories">
@@ -208,18 +176,6 @@
 		              <span class="icon"><i class="fas fa-dolly"></i></span>
 
 		              <span class="list">Orders</span>
-
-		            </a>
-
-		          </li>
-
-		          <li>
-
-		            <a href="report.php" class="icon">
-
-		              <span class="icon"><i class="fas fa-chart-pie"></i></span>
-
-		              <span class="list">Report</span>
 
 		            </a>
 
@@ -291,55 +247,7 @@
 
 
 
-						<?php
-
-        // $select = mysqli_query($conx, "select * from registration where role_id = 2");
-
-        // $i = 1;
-
-        // while ($row = mysqli_fetch_assoc($select)) {
-
-
-
-            //print_r($row);
-
-            ?>
-
-            <!-- <tr>
-
-                <td data-label="Id:" ><?php echo $i; ?></td>
-
-                <td data-label="Username:"><?php echo $row["register_username"]; ?></td>
-
-                <td data-label="Mobile No:"><?php echo $row["register_mobile"]; ?></td>
-
-                <td data-label="Email:"><?php echo $row["register_email"]; ?></td>
-
-				<td data-label="Action:"><a href="customerdelete.php?id=<?php echo $row['register_id']; ?>"><button class="btn btn-danger">Delete</button></a></td>
-
-				
-
-            </tr> -->
-
-            <?php
-
-        //     $i++;
-
-        // }
-
-        ?>
-
-					       	
-
-					       	
-
-
-
-					       	
-
-					      
-
-					      
+						
 
 					    </tbody>
 
@@ -360,7 +268,3 @@
 </body>
 
 </html>
-
-<?php 
-// include("db_conx_close.php");
-?>

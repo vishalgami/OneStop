@@ -7,7 +7,7 @@
     display: block;
     position: relative;
     /* height of your footer */
-/*    padding-bottom: 100px; */
+   /* padding-bottom: 100px; */
     
 }
 footer-parent{
@@ -15,16 +15,10 @@ footer-parent{
     bottom: 0;
     width: 100%;
 }
-.footer {
-    
-/*    position: absolute;*/
-    bottom: 0;
-    width: 100%;
-}
+
 .cart-section{
-/*    margin:30px 180px 0 180px;*/
     margin:30px 180px 118px 180px;
-    padding:0;
+    padding:0 20px 20px 20px;
 }
 
 .cart-item-title{
@@ -65,6 +59,11 @@ footer-parent{
 }
 
 .product-retail-price{
+    padding-top:28px;
+    vertical-align: top;
+}
+
+.product-quantity{
     padding-top:28px;
     vertical-align: top;
 }
@@ -159,11 +158,11 @@ footer-parent{
     color:#282D3F; 
 }
 
-@media only screen and (max-width:991px){
+@media only screen and (max-width:2100px){
     .cart-section{
 /*    margin:30px 180px 0 180px;*/
         margin:30px 50px 118px 50px;
-        padding:0;
+        /* padding:0; */
     }
     .cart-item-price {
         padding-top: 15px;
@@ -174,17 +173,39 @@ footer-parent{
         border-right: none;
         padding-right: 30px;
     }
+    .footer {
+        position: absolute;
+         bottom: 0;
+         width: 100%;
+     }
 }
-
+@media only screen and (max-width:991px) {
+    .footer{
+        position:relative !important;
+        margin:30px 0 0 0;
+        background-color:#161D27;
+        padding:20px;
+    }
+    .footer-column{
+        padding:0 !important;
+    }
+}
 @media only screen and (max-width:600px){
     .cart-section{
 /*    margin:30px 180px 0 180px;*/
         margin:30px 50px 118px 50px;
-        padding:0;
+        padding:0 20px 20px 20px;
     }
     
     .cart-items {
         border-right: none;
         padding-right: 30px;
     }
+
+    .footer {
+    
+        position: relative !important;
+         bottom: 0;
+         width: 100%;
+     }
 }

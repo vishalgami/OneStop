@@ -32,12 +32,18 @@
             <div class="wishlist-image">
                 <img src="../images/wishlist2.png" alt="Image not found" class="wishlist-img" />
             </div>
-
+            <br/><br/>
+                <div class="wishlist-button">
+                    <a href="../index.php"><button type="button" class="btn btn-primary wishlist-btn">Continue Shopping</button></a>
+                </div>
+            </div>
             
             <!--End of wishlist page-->
-            <!--footer-->
-            <?php include("footer.php");?>
-            <!--End of footer-->
+            
         </div>
+        <!--footer-->
+        <?php include("footer.php");?>
+        <!--End of footer-->
+    </div>
     </body>
 </html>

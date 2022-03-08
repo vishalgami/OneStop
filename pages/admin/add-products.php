@@ -1,201 +1,3 @@
-<?php
-// session_start();
-// include("db_conx.php");
-
-
-
-// if(!isset($_SESSION["admin_id"]))
-
-// {
-
-//   header("location: ../signin.php");
-
-//   exit();
-
-// }
-
-
-
-// 	if(isset($_POST['submit'])){
-
-// 	$cate=$_POST['cat'];
-
-// 	$brand=$_REQUEST['brand'];
-
-// 	$prod=$_REQUEST['product'];
-
-// 	$prod_detail=$_REQUEST['prod_detail'];
-
-// 	$price=$_REQUEST['price'];
-
-// 	$mrp=$_REQUEST['mrp'];
-
-// 	$stock=$_REQUEST['instock'];
-
-
-
-// 	$prod_code=$_REQUEST['prod_code'];
-
-// 	$color=$_REQUEST['color'];
-
-// 	$shape=$_REQUEST['shape'];
-
-// 	$size=$_REQUEST['size'];
-
-// 	$material=$_REQUEST['material'];
-
-// 	$mfgpartno=$_REQUEST['mpartno'];
-
-// 	$country_org=$_REQUEST['country_org'];
-
-
-
-
-
-//     /*$file_name = $_FILES['image']['name'];
-
-//     $temp_directory = $_FILES['image']['tmp_name'];
-
-//     move_uploaded_file($temp_directory,"../Products Images/".$file_name);*/
-
-//     $data='';
-
-//     foreach($_FILES['image']['tmp_name'] as $key => $image){
-
-// 	 $imageName = $_FILES['image']['name'][$key];
-
-// 	 $imageTmpName = $_FILES['image']['tmp_name'][$key];
-
-	 
-
-//     move_uploaded_file($imageTmpName,"../Products Images/".$imageName);
-
-//     $data .=$imageName.",";
-
-
-
-// 	}
-
-   
-
-   
-
-    
-
-
-
-//     // print_r($_FILES);
-
-// // die;
-
-// 	if(!empty($_REQUEST['prod_code']) && !empty($_REQUEST['color']) && !empty($_REQUEST['shape']) && !empty($_REQUEST['size']) && !empty($_REQUEST['material']) && !empty($_REQUEST['mpartno'])  && !empty($_REQUEST['country_org']) ) {  
-
-//     $sql = "INSERT INTO `products` (`cat_id`,`brand_name`,`product_name`,`product_details`,`product_price`,`product_mrp`,`product_stock`,`product_img`,`product_code`,`colour`,`shape`,`size`,`material`,`mfg_part_no`,`country_origin`)
-
-// 		VALUES ('$cate','$brand','$prod','$prod_detail','$price','$mrp','$stock','$data','$prod_code','$color','$shape','$size','$material','$mfgpartno','$country_org')";
-
-
-
-	
-
-// //    die;
-
-
-
-	
-
-// 	//$result = mysqli_query($conx,$sql);
-
-
-
-// 	if(!mysqli_query($conx,$sql))
-
-//     {
-
-//         echo "<script>alert('Some values are missing in fields');
-
-//         window.location.href='add-products.php';</script>";
-
-//         // print_r($sql);
-
-//         // die('ERROR:'.mysqli_error($conx));
-
-//     }
-
-//     else {
-
-//     	echo "<script>alert('Product details are uploaded successfully');
-
-//         window.location.href='add-products.php';</script>";
-
-//     }
-
-    	
-
-//   }
-
-// 	else{
-
-// 		$sql = "INSERT INTO `products` (`cat_id`,`brand_name`,`product_name`,`product_details`,`product_price`,`product_mrp`,`product_stock`,`product_img`)
-
-// 		VALUES ('$cate','$brand','$prod','$prod_detail','$price','$mrp','$stock','$data')";
-
-
-
-// 	// print_r($sql);
-
-// //    die;
-
-
-
-	
-
-// 		//$result = mysqli_query($conx,$sql);
-
-
-
-// 		if(!mysqli_query($conx,$sql))
-
-//     {
-
-//         echo "<script>alert('Some values are missing');
-
-//          window.location.href='add-products.php';</script>";
-
-        
-
-//     }
-
-//     else {
-
-    
-
-//     	echo "<script>alert('Product details are uploaded successfully');
-
-//         window.location.href='add-products.php';</script>";
-
-// 	}
-
-
-
-// 	}
-
-		    
-
-   
-
-// }
-
-
-
-
-
-
-
-?>
-
-
-
 <html>
 
 <head>
@@ -279,7 +81,7 @@
 
 						  	<a href="profile.php">My Profile</a>
 
-						    <a href="logout_admin.php">Logout</a>
+						    <a href="../signin.php">Logout</a>
 
 
 
@@ -341,19 +143,6 @@
 
 		          </li>
 
-		          
-
-		          <!-- <li>
-
-		            <a href="dboydetail.php">
-
-		              <span class="icon"><i class="fas fa-shipping-fast"></i></span>
-
-		              <span class="list">Delivery Boy Details</span>
-
-		            </a>
-
-		          </li> -->
 
 		          <li>
 
@@ -391,17 +180,6 @@
 
 		          </li>
 
-		          <li>
-
-		            <a href="report.php" class="icon">
-
-		              <span class="icon"><i class="fas fa-chart-pie"></i></span>
-
-		              <span class="list">Report</span>
-
-		            </a>
-
-		          </li>
 
 		        </ul>
 
@@ -451,29 +229,6 @@
 
                         <option value=" ">Categories</option>
 
-                        <?php
-
-                        // $query3 = "SELECT * FROM category";
-
-                        // $result3 = mysqli_query($conx,$query3);
-
-                        // while($row1 = mysqli_fetch_array($result3)){
-
-                            ?>
-
-                            <option value=<?php 
-							// echo $row1['cat_id']; 
-							?> 
-							<?php
-							//  echo $row1['cat_name']; 
-							 ?>	
-
-						</option>
-
-                        <?php 
-						// }
-						?>
-
                     </select><hr>
 
 
@@ -504,7 +259,6 @@
 
 	    			 	<input type="number" id="instock" required="true"  name="instock" class="" style="width:180px; border-radius:5px;"><hr>
 
-	    			 	<button type=""></button>
 
 	    			 	<label>Product Photo :  </label>
 
@@ -522,15 +276,15 @@
 
 
 
-			          <label id="lb1" style="display:none;">Product Code :  </label>
+			          <label id="lb1" style="display:none;">Fabric:  </label>
 
-			          <input type="hidden" id="id1" name="prod_code" value="" style="width:180px; border-radius:5px; display:inline; margin-bottom: 25px;"><br id="br1"  style="display:none;">
+			          <input type="hidden" id="id1" name="fabric" value="" style="width:180px; border-radius:5px; display:inline; margin-bottom: 25px;"><br id="br1"  style="display:none;">
 
 
 
-			          <label id="lb2" style="display:none;">Colour :  </label>
+			          <label id="lb2" style="display:none;">Fit :  </label>
 
-			          <input type="hidden" id="id2" name="color"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br2"  style="display:none;">
+			          <input type="hidden" id="id2" name="fit"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br2"  style="display:none;">
 
 
 
@@ -540,9 +294,9 @@
 
 
 
-			          <label id="lb3" style="display:none;">Shape :  </label>
+			          <label id="lb3" style="display:none;">Occasion:  </label>
 
-			          <input type="hidden" id="id3" name="shape"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br3"  style="display:none;">
+			          <input type="hidden" id="id3" name="occasion"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br3"  style="display:none;">
 
 
 
@@ -552,24 +306,17 @@
 
 
 
-			          <label id="lb5" style="display:none;">Material :  </label>
+			          <label id="lb5" style="display:none;">Pattern:  </label>
 
-			          <input type="hidden" id="id5" name="material" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br5"  style="display:none;">
+			          <input type="hidden" id="id5" name="pattern" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br5"  style="display:none;">
 
 
 
-			          <label id="lb6" style="display:none;">Manufacturer Part Number :  </label>
+			          <label id="lb6" style="display:none;">Wash Care:  </label>
 
-			          <input type="hidden" id="id6" name="mpartno"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br6"  style="display:none;">
+			          <input type="hidden" id="id6" name="washcare"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br6"  style="display:none;">
 
 			         
-
-			         <label id="lb7" style="display:none;">Country of origin :  </label>
-
-			          <input type="hidden" id="id7" name="country_org"  value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br7"  style="display:none;">
-
-
-
 			          <button  type="submit" id="submit" name="submit" class="btn btn-success">Save</button>
 
              		 
@@ -598,17 +345,6 @@
 
 <script>
 
-// 	$(document).ready(function() {
-
-//   $('.add_product').submit(function() {
-
-//     $(this).find(':input').filter(function() { return !this.value; }).attr('disabled', 'disabled');
-
-//     return true; // make sure that the form is still submitted
-
-//   });
-
-// });
 
 function pdetails() {
 
@@ -626,8 +362,6 @@ function pdetails() {
 
   document.getElementById("id6").setAttribute("type", "text");
 
-  document.getElementById("id7").setAttribute("type", "text");
-
 
 
   document.getElementById("lb1").style.display="inline";
@@ -642,9 +376,6 @@ function pdetails() {
 
   document.getElementById("lb6").style.display="inline";
 
-  document.getElementById("lb7").style.display="inline";
-
-  //document.getElementById("color").setAttribute("type", "text");
 
   
 
@@ -660,7 +391,6 @@ function pdetails() {
 
   document.getElementById("br6").style.display="block";
 
-  document.getElementById("br7").style.display="block";
 
 }
 
@@ -671,45 +401,3 @@ function pdetails() {
 </body>
 
 </html>
-
-<script>
-
-
-
-  function readURL(input) { 
-
-    if (input.files && input.files[0]) {
-
-        var reader = new FileReader();
-
-
-
-        reader.onload = function (e) {
-
-            $('#uploadPreview').attr('src', e.target.result);
-
-        }
-
-
-
-        reader.readAsDataURL(input.files[0]);
-
-    }
-
-}
-
-
-
-$("#uploadImage").change(function(){
-
-    readURL(this);
-
-});
-
-
-
-</script>
-
-<?php 
-// include("db_conx_close.php");
-?>

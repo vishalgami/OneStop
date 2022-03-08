@@ -41,9 +41,18 @@
                                 <td class="product-retail-price">
                                     $17    <del class="text-muted">$25</del>
                                 </td>
+                                <td class="product-quantity">
+                                    <div class="col" >
+                                        <select class="form-select">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td colspan="3"><hr></td>
+                                <td colspan="4"><hr></td>
                             </tr>
                             <tr>
                                 <td>
@@ -87,7 +96,7 @@
                 </div>
             </div>
             <!--End of cart section-->
-            
+        </div>
             <!--footer-->
             <?php include("footer.php");?>
             <!--End of footer-->

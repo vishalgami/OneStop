@@ -1,36 +1,3 @@
-<?php
-// session_start();
-// include("db_conx.php");
-
-
-
-// if(!isset($_SESSION["admin_id"]))
-
-// {
-
-//   header("location: ../signin.php");
-
-//   exit();
-
-// }
-
-?>
-<?php 
-	if(isset($_POST['resetpass'])){
-		$pass= $_POST['pass'];
-		$cpass=$_POST['cpass'];
-		if($pass==$cpass){
-		    $pwd = md5($pass); //LATEST CHANGES PASSWORD ENCRYPTION
-		    
-			$reset = mysqli_query($conx,"UPDATE `registration` SET `register_password`='$pwd' where `register_email`='admin@gmail.com'");
-			echo "<script>alert('Your password is changed successfully!');</script>";
-		}
-		else{
-			echo "<script>alert('Confirm Password does not match with password,please try again !');</script>";
-		}
-
-	}
-?>
 <html>
 
 <head>
@@ -172,20 +139,7 @@
 
 		          </li>
 
-		           
-
-		          <!-- <li>
-
-		            <a href="dboydetail.php">
-
-		              <span class="icon"><i class="fas fa-shipping-fast"></i></span>
-
-		              <span class="list">Delivery Boy Details</span>
-
-		            </a>
-
-		          </li> -->
-
+		    
 		          <li>
 
 		            <a href="categories.php" title="Categories">
@@ -222,17 +176,6 @@
 
 		          </li>
 
-		          <li>
-
-		            <a href="report.php" class="icon">
-
-		              <span class="icon"><i class="fas fa-chart-pie"></i></span>
-
-		              <span class="list">Report</span>
-
-		            </a>
-
-		          </li>
 
 		        </ul>
 
@@ -270,25 +213,7 @@
 
 	    	 <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 main-div">
 
-	    	  <!--<div class="profilpic" style="margin-left:800px;">	
-
-	    	 	<form class="form-signup" action="" method="">		          
-
- 			 	<div class="upload-btn-wrapper" style="text-align:center;">
-
- 			 	
-
- 			 	
-
-               <button class="btn-2"><input id="uploadImage" type="file" title = "Choose a Profile picture"  class=" form-control input-lg  ">Upload Profile picture</button><br><br>
-
-               <img src="https://cdn.pixabay.com/photo/2017/08/16/00/29/add-person-2646097_960_720.png" id="uploadPreview" style="border:none; outline:none; margin-left:20px; width:150px; height:150px; border-radius:50%;" />
-
-              	</div>
-
-       			</form>
-
-       			</div>-->
+	    	
 
        			<p  style="font-size:15px;">
 
@@ -327,45 +252,3 @@
 </body>
 
 </html>
-
-<script>
-
-
-
-  function readURL(input) { 
-
-    if (input.files && input.files[0]) {
-
-        var reader = new FileReader();
-
-
-
-        reader.onload = function (e) {
-
-            $('#uploadPreview').attr('src', e.target.result);
-
-        }
-
-
-
-        reader.readAsDataURL(input.files[0]);
-
-    }
-
-}
-
-
-
-$("#uploadImage").change(function(){
-
-    readURL(this);
-
-});
-
-
-
-</script>
-
-<?php 
-// include("db_conx_close.php");
-?>

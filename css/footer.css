@@ -9,10 +9,7 @@
     padding:20px;
 }
 
-.footer-column{
-  
-    padding:10px 80px;
-}
+
 
 .footer-links ul{
    list-style: none;
@@ -40,4 +37,38 @@
 .footer-link:hover{
     color:#E8E9EA;
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .footer{
+        margin:30px 0 0 0;
+        background-color:#161D27;
+        padding:20px; 
+    }
+    .footer-column{
+        padding:10px 80px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .footer{
+        margin:30px 0 0 0;
+        background-color:#161D27;
+        padding:20px;
+    }
+    .footer-column{
+        padding:0 !important;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .footer{
+        margin:30px 0 0 0;
+        background-color:#161D27;
+        padding:20px;
+    }
+    .footer-column{
+        padding:0 !important;
+    }
 }

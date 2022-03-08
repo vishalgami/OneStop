@@ -31,7 +31,7 @@
                         </form>
                     </li>
                 </ul>
-                <ul class="right-menu" type="none">
+                <ul class="right-menu " type="none">
                     <li>
                         <div class="profile-dropdown">
                             <div class="header-icon ">
