@@ -68,7 +68,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="pages/wishlist.php" class="header-link">
+                                <a href="wishlist.php" class="header-link">
                                     <div class="header-icon ">
                                         <div>
                                             <i class="fa fa-heart-o" style="color:deeppink;"></i>
@@ -80,7 +80,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="pages/cart.php" class="header-link">
+                                <a href="cart.php" class="header-link">
                                     <div class="header-icon ">
                                         <div>
                                             <i class="fa fa-shopping-bag" style="color:red;"></i>
