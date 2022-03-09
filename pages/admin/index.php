@@ -98,14 +98,6 @@
 			</div>
 			<div class="container">
 				<p style="font-size: 24px; margin-bottom:20px;">Welcome to the Admin Panel</p>
-				<div class="item_wrap">
-					<div class="item">
-						<a href="../../index.php">
-							<img src="../../images/homepage.png" width=80% height=80%>
-						</a>
-					</div>
-
-				</div>
 
 			</div>
 		</div>
