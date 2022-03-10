@@ -67,7 +67,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="Categories" title="Categories">
+							<a href="categories.php" title="Categories">
 								<span class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
 								<span class="list">Categories</span>
 							</a>

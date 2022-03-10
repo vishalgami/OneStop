@@ -14,6 +14,7 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/product.js"></script>
+    <link rel="icon" type="img/ico" href="images/One1.ico">
 </head>
 
 <body>
