@@ -2,6 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Admin Panel-Categories</title>
+	<link rel="icon" type="img/ico" href="../../images/One1.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
