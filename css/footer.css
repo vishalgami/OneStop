@@ -2,64 +2,74 @@
     margin: 0;
     padding: 0;
 }
-.footer{
-    margin:30px 0 0 0;
-    background-color:#161D27;
-    padding:20px;
+
+.footer {
+    margin: 30px 0 0 0;
+    background-color: #161d27;
+    padding: 20px;
 }
-.footer-links ul{
-   list-style: none;
-   padding-left:0;
+
+.footer-links ul {
+    list-style: none;
+    padding-left: 0;
 }
-.footer-main-heading{
-   font-size:28px;
-    color:#E8E9EA; 
-    margin-bottom:10px;
+
+.footer-main-heading {
+    font-size: 28px;
+    color: #e8e9ea;
+    margin-bottom: 10px;
 }
-.footer-heading{
-    font-size:19px;
-    color:#E8E9EA;
+
+.footer-heading {
+    font-size: 19px;
+    color: #e8e9ea;
 }
-.footer-content{
-    color:#E8E9EA;
-    font-size:14px;
+
+.footer-content {
+    color: #e8e9ea;
+    font-size: 14px;
 }
-.footer-link{
-    font-size:13px;
-    color:#E8E9EA;
+
+.footer-link {
+    font-size: 13px;
+    color: #e8e9ea;
     text-decoration: none;
 }
-.footer-link:hover{
-    color:#E8E9EA;
+
+.footer-link:hover {
+    color: #e8e9ea;
     text-decoration: underline;
 }
-@media only screen and (max-width:1200px) {
-    .footer{
-        margin:30px 0 0 0;
-        background-color:#161D27;
-        padding:20px; 
+
+@media only screen and (max-width: 1200px) {
+    .footer {
+        margin: 30px 0 0 0;
+        background-color: #161d27;
+        padding: 20px;
     }
-    .footer-column{
-        padding:10px 80px;
-    }
-}
-@media only screen and (max-width:991px) {
-    .footer{
-        margin:30px 0 0 0;
-        background-color:#161D27;
-        padding:20px;
-    }
-    .footer-column{
-        padding:0 !important;
+    .footer-column {
+        padding: 10px 80px;
     }
 }
-@media only screen and (max-width:600px) {
-    .footer{
-        margin:30px 0 0 0;
-        background-color:#161D27;
-        padding:20px;
+
+@media only screen and (max-width: 991px) {
+    .footer {
+        margin: 30px 0 0 0;
+        background-color: #161d27;
+        padding: 20px;
     }
-    .footer-column{
-        padding:0 !important;
+    .footer-column {
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        margin: 30px 0 0 0;
+        background-color: #161d27;
+        padding: 20px;
+    }
+    .footer-column {
+        padding: 0 !important;
     }
 }

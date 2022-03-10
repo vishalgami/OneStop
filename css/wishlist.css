@@ -1,76 +1,78 @@
-body{
-    margin:0;
-    padding:0;
-    height:100%;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     /*Disable the text selection*/
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
 .main-container {
-    min-height:100%;
-    /* will cover the 100% of viewport */
-/*    min-height: 100vh; */
+    min-height: 100%;
     overflow: hidden;
     display: block;
     position: relative;
-    /* height of your footer */
-   /* margin-bottom: 100px; */
-    
 }
-footer-parent{
-    /* position: relative; */
+
+footer-parent {
     bottom: 0;
     width: 100%;
 }
+
 .footer {
-    
-   position: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
-.right-menu{
-    margin:11px 40px 10px 0 !important;
+
+.right-menu {
+    margin: 11px 40px 10px 0 !important;
     display: inline-flex;
-    float:right;  
+    float: right;
 }
+
 .header-icon-label {
     font-size: 12px;
     margin-top: 5px !important;
 }
-.wishlist-img{
+
+.wishlist-img {
     object-fit: contain;
-    height:100px;
-    width:100px;
-    margin:20px;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
 }
-.wishlist{
-   
+
+.wishlist {
     position: relative;
     margin: 58px 0 88px 0;
     text-align: center;
-/*
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-*/
 }
-.wishlist-title{
-    font-size:23px;
+
+.wishlist-title {
+    font-size: 23px;
     cursor: default;
 }
-.wishlist-subtitles{
-    color:#8E9298;
-    font-size:15px;
-    font-weight:200;
+
+.wishlist-subtitles {
+    color: #8e9298;
+    font-size: 15px;
+    font-weight: 200;
     cursor: default;
 }
-.wishlist-btn{
-    margin-top:30px;
+
+.wishlist-btn {
+    margin-top: 30px;
     font-size: 15px;
 }
