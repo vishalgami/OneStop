@@ -38,7 +38,7 @@
 								<button class="dropbtn"><i class="fas fa-user"></i></button>
 								<div class="dropdown-content">
 									<a href="profile.php">My profile</a>
-									<a href="../signin.php">Logout</a>
+									<a href="../../includes/templates/logout.php">Logout</a>
 								</div>
 							</div>
 						</div>

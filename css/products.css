@@ -124,6 +124,10 @@ body {
 .product-label {
     color: #585d6b;
     font-size: 12px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-link {

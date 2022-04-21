@@ -1,3 +1,25 @@
+<?php 
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    require_once('../../includes/templates/ProductOps.php');
+
+	$prod = new ProductOps();
+
+	//Handle get request and delete the product details
+	if(isset($_GET["prodId"])){
+		$prodId = $_GET["prodId"];
+		$isDeleted = $prod->deleteProd($prodId);
+		if($isDeleted){
+			echo "<script>alert('Product Deleted Successfully!');window.location.href='./products.php';</script>";
+		}
+		else{
+			echo "<script>alert('Some error occured while deleting category name!');</script>"; 
+		}
+	}
+	
+?>
 <html>
 
 <head>
@@ -40,7 +62,7 @@
 								<button class="dropbtn"><i class="fas fa-user"></i></button>
 								<div class="dropdown-content">
 									<a href="profile.php">My Profile</a>
-									<a href="../signin.php">Logout</a>
+									<a href="../../includes/templates/logout.php">Logout</a>
 								</div>
 							</div>
 							<span id="adminID">Admin</span>
@@ -128,6 +150,7 @@
 							<th>Id</th>
 							<th>Product Name</th>
 							<th>Category</th>
+							<th>Sub Category</th>
 							<th>Brand</th>
 
 							<th>Product Photo</th>
@@ -146,14 +169,101 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php 
+							$id = 0;
+							$data = $prod->displayProd();
+							foreach($data as $row){
+								$prodId = $row["product_id"];
+								$prodName = $row["product_name"]; 
+								$catId = $row["cat_id"]; 
+								$catName = $prod->getCategory($catId);
+								foreach($catName as $cat){
+									$prodCat = $cat["cat_name"];
+								}
+								$subCatId = $row["sub_cat_id"]; 
+								$subCatName = $prod->getSubCategory($subCatId);
+								foreach($subCatName as $subCat){
+									$prodSubCat = $subCat["sub_cat_name"];
+								}
+								$prodBrand = $row["brand_name"]; 
+								$prodPhoto = $row["product_img"]; 
+								$prodImg = explode(",",$prodPhoto);
+								$prodDesc = $row["product_details"]; 
+								$prodStock = $row["product_stock"]; 
+								$prodPrice = $row["product_price"]; 
+								$prodMrp = $row["product_mrp"]; 
+								$prodFabric = $row["fabric"]; 
+								$prodFit= $row["fit"]; 
+								$prodSize = $row["size"]; 
+								$prodOccasion = $row["occasion"]; 
+								$prodPattern = $row["pattern"]; 
+								$prodWash = $row["washcare"]; 
+								$id += 1;
+						?>
+							<tr>
+								<td><?php echo $id;?></td>
+								<td><?php echo $prodName;?></td>
+								<td><?php echo $prodCat;?></td>
+								<td><?php echo $prodSubCat;?></td>
+								<td><?php echo $prodBrand;?></td>
+								<td><img class="myImg" id="myImg<?php echo $prodId;?>"  src="../../images/product/<?php echo $prodBrand."/".$prodImg[0];?>" alt="<?php echo $prodBrand." - ".$prodName;?>"  height=100 width=80></td>
+								<td><?php echo $prodDesc;?></td>
+								<td><?php echo $prodStock;?></td>
+								<td><?php echo $prodPrice;?></td>
+								<td><?php echo $prodMrp;?></td>
+								<td><?php echo $prodFabric;?></td>
+								<td><?php echo $prodFit;?></td>
+								<td><?php echo $prodSize;?></td>
+								<td><?php echo $prodOccasion;?></td>
+								<td><?php echo $prodPattern;?></td>
+								<td><?php echo $prodWash;?></td>
 
+								<td>
+	
+										<a href="./update-product.php?prodId=<?php echo $prodId;?>" class="btn btn-success btn-rounded">Update</a> 
+							   </td>
+							   <td>
+										<a href="./products.php?prodId=<?php echo $prodId;?>" class="btn btn-danger">Delete</a>
+									
 
+								</td>
+							</tr>
+							<!-- The Modal -->
+<div id="myModal<?php echo $prodId;?>" class="modal">
+  <span id="close" class="close<?php echo $prodId;?>">&times;</span>
+  <img class="modal-content" id="img<?php echo $prodId;?>" alt="Image not available">
+  <div class="caption" id="caption<?php echo $prodId;?>"></div>
+</div>	
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal<?php echo json_encode($prodId);?>");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg<?php echo json_encode($prodId);?>");
+var modalImg = document.getElementById("img<?php echo json_encode($prodId);?>");
+var captionText = document.getElementById("caption<?php echo json_encode($prodId);?>");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close<?php echo json_encode($prodId);?>")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+						<?php } ?>	
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-
+	
 </body>
 
 </html>

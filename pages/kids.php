@@ -1,3 +1,29 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+require_once('../includes/templates/ProductOps.php');
+
+$prod = new ProductOps();
+
+$subCatId = 3;
+$checkedCategory = [];
+$checkedBrand = [];
+if (isset($_GET['category'])) {
+    $checkedCategory = $_GET['category'];
+}
+if (isset($_GET['brand'])) {
+    $checkedBrand = $_GET['brand'];
+}
+if (isset($_GET['price'])) {
+    $checkedPrice = true;
+    $price = $_GET['price'];
+} else {
+    $checkedPrice = false;
+    $price = '0,99999';
+}
+?>
 <html>
 
 <head>
@@ -34,258 +60,187 @@
         </div>
         <div class="row mens-content">
             <div class="col-lg-2 filter-section-body">
-                <div class="filter-section">
-                    <div class="filter-title" id="category-title">
-                        Categories <span id="plus"><i class="fa fa-angle-down"></i></span>
-                    </div>
-                    <div id="category-options">
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="shirt" />
-                            <label class="form-check-label text-muted filter-label" for="shirt">Shirts</label>
+                <form action="" method="GET" id="filterForm">
+                    <div class="filter-section">
+
+                        <div class="filter-title" id="category-title">
+                            Categories <span id="plus"><i class="fa fa-angle-down"></i></span>
                         </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="jeans" />
-                            <label class="form-check-label text-muted filter-label" for="jeans">Jeans</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="tshirts" />
-                            <label class="form-check-label text-muted filter-label" for="tshirts">T-Shirts</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="jackets" />
-                            <label class="form-check-label text-muted filter-label" for="jackets">Jackets</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="sweatshirts" />
-                            <label class="form-check-label text-muted filter-label" for="sweatshirts">Sweatshirts</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="suits" />
-                            <label class="form-check-label text-muted filter-label" for="suits">Shorts</label>
+                        <div id="category-options">
+                            <?php
+                            $data = $prod->getAllCategory();
+                            foreach ($data as $row) {
+                                $cat = $row["cat_name"];
+                            ?>
+                                <div class="filter-options">
+                                    <input type="checkbox" class="form-check-input" id="<?php echo $cat ?>" value="<?php echo $cat ?>" name="category[]" <?php if (in_array($cat, $checkedCategory)) {
+                                                                                                                                                                echo 'checked';
+                                                                                                                                                            } ?> />
+                                    <label class="form-check-label text-muted filter-label"><?php echo $cat ?></label>
+                                </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-title" id="brand-title">
-                        Brand <span id="plus"><i class="fa fa-angle-down"></i></span>
-                    </div>
-                    <div id="brand-options">
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="ucb" />
-                            <label class="form-check-label text-muted filter-label" for="ucb">United Colors of Benetton</label>
+
+                    <div class="filter-section">
+                        <div class="filter-title" id="brand-title">
+                            Brand <span id="plus"><i class="fa fa-angle-down"></i></span>
                         </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="puma" />
-                            <label class="form-check-label text-muted filter-label" for="puma">Puma</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="adidas" />
-                            <label class="form-check-label text-muted filter-label" for="adidas">Adidas</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="nike" />
-                            <label class="form-check-label text-muted filter-label" for="nike">Nike</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="max" />
-                            <label class="form-check-label text-muted filter-label" for="max">Max</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="hm" />
-                            <label class="form-check-label text-muted filter-label" for="hm">H & M</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="gap" />
-                            <label class="form-check-label text-muted filter-label" for="gap">GAP</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="park-avenue" />
-                            <label class="form-check-label text-muted filter-label" for="park-avenue">Pepe Jeans</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="park-avenue" />
-                            <label class="form-check-label text-muted filter-label" for="park-avenue">Cutiekins</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="park-avenue" />
-                            <label class="form-check-label text-muted filter-label" for="park-avenue">Quechua</label>
+                        <div id="brand-options">
+                            <?php
+                            $data = $prod->getAllBrand();
+                            foreach ($data as $row) {
+                                $brand = $row["brand_name"];
+                            ?>
+                                <div class="filter-options">
+                                    <input type="checkbox" class="form-check-input" id="<?php echo $brand ?>" value="<?php echo $brand ?>" name="brand[]" <?php if (in_array($brand, $checkedBrand)) {
+                                                                                                                                                                echo 'checked';
+                                                                                                                                                            } ?> />
+                                    <label class="form-check-label text-muted filter-label"><?php echo $brand ?></label>
+                                </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-title" id="price-title">
-                        Price <span id="plus"><i class="fa fa-angle-down"></i></span>
+
+                    <div class="filter-section">
+                        <div class="filter-title" id="price-title">
+                            Price <span id="plus"><i class="fa fa-angle-down"></i></span>
+                        </div>
+                        <div id="price-options">
+                            <div class="filter-options">
+                                <input type="radio" class="form-check-input" name="price" value="0,24" <?php if ($price == '0,24') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?> />
+                                <label class="form-check-label text-muted filter-label" for="ucb">Under $25</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="radio" class="form-check-input" name="price" value="25,49" <?php if ($price == '25,49') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?> />
+                                <label class="form-check-label text-muted filter-label" for="jeans">$25 to $49</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="radio" class="form-check-input" name="price" value="50,99" <?php if ($price == '50,99') {
+                                                                                                            echo 'checked';
+                                                                                                        } ?> />
+                                <label class="form-check-label text-muted filter-label" for="tshirts">$50 to $99</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="radio" class="form-check-input" name="price" value="100,199" <?php if ($price == '100,199') {
+                                                                                                                echo 'checked';
+                                                                                                            } ?> />
+                                <label class="form-check-label text-muted filter-label" for="jackets">$100 to $199</label>
+                            </div>
+                            <div class="filter-options">
+                                <input type="radio" class="form-check-input" name="price" value="200,99999" <?php if ($price == '200,99999') {
+                                                                                                                echo 'checked';
+                                                                                                            } ?> />
+                                <label class="form-check-label text-muted filter-label" for="sweatshirts">$200 & Above</label>
+                            </div>
+                        </div>
                     </div>
-                    <div id="price-options">
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="ucb" />
-                            <label class="form-check-label text-muted filter-label" for="ucb">Under $25</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="jeans" />
-                            <label class="form-check-label text-muted filter-label" for="jeans">$25 to $50</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="tshirts" />
-                            <label class="form-check-label text-muted filter-label" for="tshirts">$50 to $100</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="jackets" />
-                            <label class="form-check-label text-muted filter-label" for="jackets">$100 to $200</label>
-                        </div>
-                        <div class="filter-options">
-                            <input type="checkbox" class="form-check-input" id="sweatshirts" />
-                            <label class="form-check-label text-muted filter-label" for="sweatshirts">$200 & Above</label>
-                        </div>
+
+                    <div class="filter-section">
+                    <br>
+                        <button type="submit" class="btn btn-danger filter-btn">Filter</button>&nbsp;&nbsp;
+                        <a href="kids.php"><button type="button" class="btn btn-danger filter-btn">Reset All</button></a>
                     </div>
-                </div>
+                </form>
             </div>
+
             <div class="col-md clothing">
                 <div class="clothing-grid-container">
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/pepe.webp" alt="Image not found" class="product-img" />
+                    <?php
+                    if (isset($_GET['category']) || isset($_GET['brand']) || $checkedPrice) {
+                        $priceArr = explode(',', $price);
+                        $data = $prod->filterProd($checkedCategory, $subCatId, $checkedBrand, $priceArr);
+                        if ($data) {
+                            foreach ($data as $row) {
+                                $prodId = $row["product_id"];
+                                $prodName = $row["product_name"];
+                                $prodBrand = $row["brand_name"];
+                                $prodPhoto = $row["product_img"];
+                                $prodImg = explode(",", $prodPhoto);
+                                $prodPrice = $row["product_price"];
+                                $prodMrp = $row["product_mrp"];
+                    ?>
+                                <a href="subproduct.php?id=<?php echo $prodId; ?>" target="_blank" class="product-link">
+                                    <div class="fade clothing-grid-item">
+                                        <div class="clothing-image">
+                                            <img src="../images/product/<?php echo $prodBrand . "/" . $prodImg[0]; ?>" alt="Image not found" class="product-img" />
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="brand-label">
+                                                <?php echo $prodBrand; ?>
+                                            </div>
+                                            <div class="product-label">
+                                                <?php echo ucwords(strtolower($prodName)); ?>
+                                            </div>
+                                            <div class="product-price">
+                                                <?php
+                                                if ($prodPrice == $prodMrp) {
+                                                    echo "$$prodMrp";
+                                                } else {
+                                                    echo "$$prodPrice <sub class='text-muted'><del>$$prodMrp</del></sub>";
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php
+                            }
+                        } else { ?>
+                            <div class="col-md clothing" style="text-align: center;">
+                                <br><br>
+                                <h4>Matching product not found, try other options</h4><br><br>
+                                <h4>Need help?</h4>
+                                Visit the <a href="contact.php" style="text-decoration:none;">contact us </a>page
                             </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Pepe Jeans
+                        <?php }
+                    } else {
+                        $data = $prod->displayProdBySub($subCatId);
+                        foreach ($data as $row) {
+                            $prodId = $row["product_id"];
+                            $prodName = $row["product_name"];
+                            $prodBrand = $row["brand_name"];
+                            $prodPhoto = $row["product_img"];
+                            $prodImg = explode(",", $prodPhoto);
+                            $prodPrice = $row["product_price"];
+                            $prodMrp = $row["product_mrp"];
+                        ?>
+                            <a href="subproduct.php?id=<?php echo $prodId; ?>" target="_blank" class="product-link">
+                                <div class="fade clothing-grid-item">
+                                    <div class="clothing-image">
+                                        <img src="../images/product/<?php echo $prodBrand . "/" . $prodImg[0]; ?>" alt="Image not found" class="product-img" />
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="brand-label">
+                                            <?php echo $prodBrand; ?>
+                                        </div>
+                                        <div class="product-label">
+                                            <?php echo ucwords(strtolower($prodName)); ?>
+                                        </div>
+                                        <div class="product-price">
+                                            <?php
+                                            if ($prodPrice == $prodMrp) {
+                                                echo "$$prodMrp";
+                                            } else {
+                                                echo "$$prodPrice <sub class='text-muted'><del>$$prodMrp</del></sub>";
+                                            }
+                                            ?>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="product-label">
-                                    Boys Regular Fit Casual Shirt
-                                </div>
-                                <div class="product-price">
-                                    $10 <sub class="text-muted"><del>$18</del></sub>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/h&m3.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    H & M
-                                </div>
-                                <div class="product-label">
-                                    Girls Printed T-shirt
-                                </div>
-                                <div class="product-price">
-                                    $7
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/gap1.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    GAP
-                                </div>
-                                <div class="product-label">
-                                    Boys Regular Fit Cargo Shorts
-                                </div>
-                                <div class="product-price">
-                                    $18 <sub class="text-muted"><del>$32</del></sub>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/max2.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Max
-                                </div>
-                                <div class="product-label">
-                                    Boys Slim Fit Jeans
-                                </div>
-                                <div class="product-price">
-                                    $7
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/jacket.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    H & M
-                                </div>
-                                <div class="product-label">
-                                    Girls Denim Jacket
-                                </div>
-                                <div class="product-price">
-                                    $14 <sub class="text-muted"><del>$27</del></sub>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/gap2.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    GAP
-                                </div>
-                                <div class="product-label">
-                                    Boys Printed Sweatshirt
-                                </div>
-                                <div class="product-price">
-                                    $15 <sub class="text-muted"><del>$35</del></sub>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/jacket1.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Quechua
-                                </div>
-                                <div class="product-label">
-                                    Printed Padded Jacket
-                                </div>
-                                <div class="product-price">
-                                    $30 <sub class="text-muted"><del>$35</del></sub>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="../images/product/cutiekins.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Cutiekins
-                                </div>
-                                <div class="product-label">
-                                    Girls Printed Skirts
-                                </div>
-                                <div class="product-price">
-                                    $20
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                            </a>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

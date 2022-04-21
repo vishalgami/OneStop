@@ -1,3 +1,17 @@
+<?php 
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    require_once('../../includes/config/Config.php');
+
+	$selectQy = "select * from users";
+
+	$conn = new config();
+
+    $data = $conn->connect()->query($selectQy)->fetchAll();
+
+?>
 <html>
 
 <head>
@@ -37,7 +51,7 @@
 								<button class="dropbtn"><i class="fas fa-user"></i></button>
 								<div class="dropdown-content">
 									<a href="profile.php">My profile</a>
-									<a href="../signin.php">Logout</a>
+									<a href="../../includes/templates/logout.php">Logout</a>
 								</div>
 							</div>
 							<span id="adminID">Admin</span>
@@ -103,17 +117,27 @@
 					<thead>
 						<tr>
 							<th>Id</th>
-
 							<th>Username</th>
 							<th>Mobile Number</th>
 							<th>Email</th>
-
-							<th>Action</th>
-
 						</tr>
 					</thead>
 					<tbody>
-
+						<?php 
+							$id = 0;
+							foreach($data as $row){
+								$username = $row["username"]; 
+								$mobile = $row["mobile"];
+								$email = $row["email"];
+								$id += 1;
+						?>
+							<tr>
+								<td><?php echo $id;?></td>
+								<td><?php echo $username;?></td>
+								<td><?php echo $mobile;?></td>
+								<td><?php echo $email;?></td>
+							</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 

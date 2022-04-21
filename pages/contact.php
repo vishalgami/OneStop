@@ -1,3 +1,27 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    require_once('../includes/templates/ContactOps.php');
+
+	$contactOp = new ContactOps();
+
+    if(isset($_POST["contact"])){
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $mob = $_POST["mobile"];
+        $message = $_REQUEST["message"];
+
+        if(isset($name) && isset($mob) && isset($email) && isset($message)){
+            $submitted = $contactOp->submitContactRequest($name,$email,$mob,$message);
+            if($submitted){
+                echo "<script>alert('Contact form submitted successfully');window.location.href='../index.php'</script>";
+            }else{
+                echo "<script>alert('Some error occured while submitting contact form!');</script>";
+            }
+        }
+    }
+?>
 <html>
 
 <head>
@@ -9,7 +33,6 @@
     <link rel="stylesheet" type="text/css" href="../css/contact.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/contact-form-validation.js"></script>
     <script src="../js/header.js"></script>
 </head>
 
@@ -26,26 +49,26 @@
                 <h2 style="text-align: center;">Contact Us</h2>
                 <hr />
                 <br />
-                <form class="form-box" method="post" action="../index.php" id="contactForm">
+                <form class="form-box" method="post" action="" id="contactForm">
                     <div class="form-group">
                         <label class="required-field">Name</label><span id="notify"></span>
-                        <input type="text" class="form-control input-lg" id="name" /><br />
+                        <input type="text" class="form-control input-lg" id="name" name="name" required/><br />
                     </div>
                     <div class="form-group">
                         <label class="required-field">Email</label><span id="notify"></span>
-                        <input type="email" class="form-control input-lg" id="email" /><br />
+                        <input type="email" class="form-control input-lg" id="email" name="email" required/><br />
                     </div>
                     <div class="form-group">
                         <label class="required-field">Mobile Number</label><span id="notify"></span>
-                        <input type="text" class="form-control input-lg" id="mobile" /><br />
+                        <input type="text" class="form-control input-lg" id="mobile" name="mobile" required/><br />
                     </div>
                     <div class="form-group">
                         <label class="required-field">Message</label><span id="notify"></span>
-                        <textarea class="form-control input-lg" id="message"></textarea>
+                        <textarea class="form-control input-lg" id="message" name="message" required></textarea>
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="button" class="form-control btn btn-danger" value="Submit" id="contactBtn" />
+                        <input type="submit" class="form-control btn btn-danger" name="contact" value="Submit" id="contactBtn" />
                     </div>
                 </form>
             </div>

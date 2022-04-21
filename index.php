@@ -1,3 +1,13 @@
+<?php
+   if(!isset($_SESSION)){
+        session_start();
+    }
+
+    require_once('./includes/templates/ProductOps.php');
+
+	$prod = new ProductOps();
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -54,19 +64,32 @@
                                         <i class="fa fa-user-o " style="color:darkblue;"></i>
                                         <div class="header-icon-label">
                                             Profile
-                                            <div class="profile-dropdown-content">
-                                                <b>Welcome</b><br />
-                                                <div class="text-muted">Access your account and manage orders</div><br />
-                                                <a href="pages/signin.php">
-                                                    <button type="button" class="btn btn-danger login-btn">Sign In</button>
-                                                </a><br />
-                                                <a href="pages/signup.php" class="signup-link">Not connected yet ? Signup here !</a>
-                                                <hr />
-                                                <a href="pages/profile.php" class="profile-links">Account</a>
-                                                <a href="pages/orders.php" class="profile-links">Orders</a>
-                                                <a href="pages/wishlist.php" class="profile-links">Wishlist</a>
-                                                <a href="pages/contact.php" class="profile-links">Contact Us</a>
-                                            </div>
+                                            <?php 
+                                                if(!isset($_SESSION["login"])){?>
+                                                <div class="profile-dropdown-content">
+                                                    <b>Welcome</b><br />
+                                                    <div class="text-muted">Access your account and manage orders</div><br />
+                                                    <a href="pages/signin.php">
+                                                        <button type="button" class="btn btn-danger login-btn">Sign In</button>
+                                                    </a><br />
+                                                    <a href="pages/signup.php" class="signup-link">Not connected yet ? Signup here !</a>
+                                                    <hr />
+                                                    
+                                                    <a href="pages/contact.php" class="profile-links">Contact Us</a>
+                                                </div>
+                                            <?php }else{ ?>
+                                                <div class="profile-dropdown-content">
+                                                    <b>Hi,<span class="username"><?php echo $_SESSION["username"];?></span></b><br />
+                                                    <a href="pages/profile.php" class="profile-links">Account</a>
+                                                    <a href="pages/orders.php" class="profile-links">Orders</a>
+                                                    <a href="pages/wishlist.php" class="profile-links">Wishlist</a>
+                                                    <a href="pages/contact.php" class="profile-links">Contact Us</a>
+                                                    <hr />
+                                                    <a href="./includes/templates/logout.php">
+                                                        <button type="button" class="btn btn-danger login-btn">Log Out</button>
+                                                    </a>
+                                                </div>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -99,10 +122,10 @@
                     </div>
                 </div>
                 <div class="justify-content-center search" id="navbarCenteredExample">
-                    <form class="d-flex input-group w-auto">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <form class="d-flex input-group w-auto" action="./pages/search.php" method="get">
+                        <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <span class="input-group-text border-0" id="search-addon">
-                            <i class="fa fa-search"></i>
+                            <button type="submit" class="input-group-text border-0"><i class="fa fa-search"></i></button>
                         </span>
                     </form>
                 </div>
@@ -116,7 +139,7 @@
         </div>
         <!--End of banner-->
         <!--Trending now section-->
-        <div class="row category">
+        <div class="row fade category">
             <h1 class="category-title">Trending Now</h1>
             <div class="category-grid-container">
                 <div class="category-grid-item">
@@ -163,167 +186,83 @@
         </div>
         <!--End of Trending now section-->
         <!-- Products section-->
-        <div class="mens-title" style="text-align: center; padding-top:20px; font-size:35px;">
+        <div class="fade mens-title" style="text-align: center; padding-top:20px; font-size:35px;">
             Experience the style
         </div>
         <div class="row mens-content" style="border:none;">
-            <div class="collection-title" style="padding-top:20px;font-size:22px; text-align: center;">Men</div>
-            <div class="col-md clothing">
+            <div class="fade collection-title" style="padding-top:20px;font-size:22px; text-align: center;">Men</div>
+            <div class=" col-md clothing-home">
                 <div class="clothing-grid-container">
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
+                <?php
+                        $getSimilarData = $prod->displaySomeProd(2);
+							foreach($getSimilarData as $row){
+								$prodId = $row["product_id"];
+								$prodName = $row["product_name"];
+								$prodBrand = $row["brand_name"]; 
+								$prodPhoto = $row["product_img"]; 
+								$prodImg = explode(",",$prodPhoto);
+								$prodPrice = $row["product_price"]; 
+								$prodMrp = $row["product_mrp"]; 
+                        ?>
+                    <a href="pages/subproduct.php?id=<?php echo $prodId;?>" target="_blank" class="product-link">
+                        <div class="fade clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="images/product/teamspirit.webp" alt="Image not found" class="product-img" />
+                                <img src="./images/product/<?php echo $prodBrand."/".$prodImg[0];?>" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    Teamspirit
+                                    <?php echo $prodBrand;?>
                                 </div>
                                 <div class="product-label">
-                                    Heathered Crew-Neck T-shirt
+                                    <?php echo $prodName;?>
                                 </div>
                                 <div class="product-price">
-                                    $10
+                                    $<?php echo $prodPrice;?> <sub class="text-muted"><del>$<?php echo $prodMrp;?></del></sub>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/antony.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Antony Morato
-                                </div>
-                                <div class="product-label">
-                                    Abstract Print Crew-Neck T-shirt
-                                </div>
-                                <div class="product-price">
-                                    $60
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/johnplayers.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    John Players Jeans
-                                </div>
-                                <div class="product-label">
-                                    Washed Slim Fit Shirt
-                                </div>
-                                <div class="product-price">
-                                    $30
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/levis1.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Levis
-                                </div>
-                                <div class="product-label">
-                                    Textured Shirt with Patch Pocket
-                                </div>
-                                <div class="product-price">
-                                    $45
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <?php } ?>
                 </div>
             </div>
             <!-- Banner -->
-            <div class="banner">
+            <div class="fade banner">
                 <a href="pages/new_arrivals.php"><img src="images/1.jpg" alt="Image not found" class="banner-img" style="margin-top:20px; margin-bottom: 30px;"></a>
             </div>
             <!--End of banner-->
-            <div class="collection-title" style="padding-top:40px;font-size:22px; text-align: center;">Women</div>
-            <div class="col-md clothing">
+            <div class="fade collection-title" style="padding-top:40px;font-size:22px; text-align: center;">Women</div>
+            <div class="col-md clothing-home">
                 <div class="clothing-grid-container">
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
+                <?php
+                        $getSimilarData = $prod->displaySomeProd(1);
+							foreach($getSimilarData as $row){
+								$prodId = $row["product_id"];
+								$prodName = $row["product_name"];
+								$prodBrand = $row["brand_name"]; 
+								$prodPhoto = $row["product_img"]; 
+								$prodImg = explode(",",$prodPhoto);
+								$prodPrice = $row["product_price"]; 
+								$prodMrp = $row["product_mrp"]; 
+                        ?>
+                    <a href="pages/subproduct.php?id=<?php echo $prodId;?>" target="_blank" class="product-link">
+                        <div class="fade clothing-grid-item">
                             <div class="clothing-image">
-                                <img src="images/product/fig.webp" alt="Image not found" class="product-img" />
+                                <img src="./images/product/<?php echo $prodBrand."/".$prodImg[0];?>" alt="Image not found" class="product-img" />
                             </div>
                             <div class="product-info">
                                 <div class="brand-label">
-                                    Fig
+                                    <?php echo $prodBrand;?>
                                 </div>
                                 <div class="product-label">
-                                    Round-Neck Top with Ribbed Hems
+                                    <?php echo $prodName;?>
                                 </div>
                                 <div class="product-price">
-                                    $15
+                                    $<?php echo $prodPrice;?> <sub class="text-muted"><del>$<?php echo $prodMrp;?></del></sub>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/kipex.jpg" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Kipex
-                                </div>
-                                <div class="product-label">
-                                    Floral Print Top
-                                </div>
-                                <div class="product-price">
-                                    $28
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/woowzerz.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    Woowzerz
-                                </div>
-                                <div class="product-label">
-                                    Slim Fit Peplum Top
-                                </div>
-                                <div class="product-price">
-                                    $30
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="pages/subproduct.php" target="_blank" class="product-link">
-                        <div class="clothing-grid-item">
-                            <div class="clothing-image">
-                                <img src="images/product/u&f.webp" alt="Image not found" class="product-img" />
-                            </div>
-                            <div class="product-info">
-                                <div class="brand-label">
-                                    U & F
-                                </div>
-                                <div class="product-label">
-                                    A-line Top with Puff Sleeves
-                                </div>
-                                <div class="product-price">
-                                    $25
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -371,6 +310,7 @@
         </div>
         <!--End of footer-->
     </div>
+  
 </body>
 
 </html>

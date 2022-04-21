@@ -86,8 +86,59 @@
     padding: 10px 50px 10px 50px;
     color: crimson;
     font-weight: 400;
+    width:100%;
     border-radius: 5px;
     background-color: #fff;
+    border: none;
+}
+.move-to-bag-btn:hover {
+    font-size: 15px;
+    padding: 10px 50px 10px 50px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px;
+    width:100%;
+    background-color: crimson;
+    border: none;
+}
+
+.remove-section {
+    border-top: 1px solid #ccc;
+    color: crimson;
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.remove-link {
+    color: crimson;
+    text-decoration: none;
+}
+
+.remove-link:hover {
+    color: crimson;
+    text-decoration: none;
+}
+
+.remove-btn {
+    font-size: 15px;
+    padding: 10px 50px 10px 50px;
+    color: crimson;
+    font-weight: 400;
+    width:100%;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+}
+.remove-btn:hover {
+    font-size: 15px;
+    padding: 10px 50px 10px 50px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px;
+    width:100%;
+    background-color: crimson;
     border: none;
 }
 

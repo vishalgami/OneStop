@@ -1,3 +1,66 @@
+<?php 
+
+if(!isset($_SESSION)){
+	session_start();
+}
+
+require_once('../../includes/templates/ProductOps.php');
+
+$prod = new ProductOps();
+
+//Handle submit request to add product details
+if(isset($_POST["submit"])){
+	$brandName = $_POST["brand"];
+	$prodName = $_REQUEST["product"];
+	$prodDesc = $_REQUEST["prod_detail"]; 
+	$catId = $_POST["catId"]; 
+	$subCatId = $_POST["subCatId"]; 
+	$prodPrice = $_POST["price"]; 
+	$prodMrp = $_POST["mrp"]; 
+	$prodFabric = $_POST["fabric"]; 
+	$prodFit= $_POST["fit"]; 
+	$prodSize = $_POST["size"]; 
+	$prodOccasion = $_POST["occasion"]; 
+	$prodPattern = $_POST["pattern"]; 
+	$prodWash = $_POST["washcare"]; 
+	$prodStock = $_POST["stock"]; 
+
+	$prodPhoto='';
+
+	//Check if directory exist or not
+	if(!is_dir("../../images/product/".$brandName)) mkdir("../../images/product/".$brandName);
+
+    foreach($_FILES['image']['tmp_name'] as $key => $image){
+
+		$imageName = $_FILES['image']['name'][$key];
+
+		$imageTmpName = $_FILES['image']['tmp_name'][$key];
+
+		move_uploaded_file($imageTmpName,"../../images/product/".$brandName."/".$imageName);
+
+		$prodPhoto .=$imageName.",";
+	}
+
+
+	if(isset($catId) && isset($subCatId) && isset($brandName) && isset($prodName) && isset($prodDesc) && isset($prodPrice) && isset($prodMrp) && isset($prodFabric)
+	&& isset($prodFit) && isset($prodSize) && isset($prodOccasion) && isset($prodPattern) && isset($prodWash) && isset($prodStock)){
+		
+		$isAdded = $prod->addProd($catId,$subCatId,$brandName,$prodName,$prodDesc,$prodPrice,$prodMrp,$prodStock,$prodPhoto,$prodFabric,$prodFit,$prodSize,$prodOccasion,$prodPattern,$prodWash);
+		if($isAdded){
+			echo "<script>alert('New Product is Added Successfully!');window.location.href='./products.php';</script>";
+			// echo "<script>alert('New Product is Added Successfully!');";
+		}
+		else{
+			echo "<script>alert('Some error occured while adding product name!');</script>"; 
+		}
+	}
+	else{
+			echo "<script>alert('Some fields are missing!')</script>";  
+	}
+}
+
+?>
+
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -34,7 +97,7 @@
 								<button class="dropbtn"><i class="fas fa-user"></i></button>
 								<div class="dropdown-content">
 									<a href="profile.php">My Profile</a>
-									<a href="../signin.php">Logout</a>
+									<a href="../../includes/templates/logout.php">Logout</a>
 								</div>
 							</div>
 						</div>
@@ -94,8 +157,31 @@
 					<div class="item">
 						<form class="add_product" id="" method="POST" action="" enctype="multipart/form-data">
 							<label>Select Category : </label>
-							<select class="border x" name="cat" id="cat">
-								<option value=" ">Categories</option>
+							<select class="border x" name="catId" id="cat">
+								<option value="" selected disabled>Categories</option>
+								<?php  
+								$allCat=$prod->getAllCategory();
+								
+								foreach($allCat as $cat){
+									$prodCatId = $cat["cat_id"];
+									$prodCatName=$cat["cat_name"];
+								?>
+								<option value="<?php echo $prodCatId;?>"><?php echo $prodCatName;?></option>
+								<?php }?>
+							</select>
+							<br>
+							<label>Select Sub Category : </label>
+							<select class="border x" name="subCatId" id="cat">
+								<option value="" selected disabled>Sub Categories</option>
+								<?php  
+								$allSubCat=$prod->getAllSubCategory();
+								
+								foreach($allSubCat as $subCat){
+									$prodSubCatId = $subCat["sub_cat_id"];
+									$prodSubCatName=$subCat["sub_cat_name"];
+								?>
+								<option value="<?php echo $prodSubCatId;?>"><?php echo $prodSubCatName;?></option>
+								<?php }?>
 							</select>
 							<hr>
 							<label>Brand Name : </label>
@@ -108,58 +194,36 @@
 							<textarea id="prod_detail" class="" required="true" name="prod_detail" style="width:500px; height:100px; border-radius:10px;"></textarea>
 							<hr>
 							<label>Price : </label>
-							<input type="number" id="price" class="" required="true" name="price" style="width:180px; border-radius:5px;">
+							<input type="number" id="price" class="" required="true" name="price" step="0.01" style="width:180px; border-radius:5px;">
 							<hr>
 							<label>MRP: </label>
-							<input type="number" id="mrp" class="" required="true" name="mrp" style="width:180px; border-radius:5px;">
+							<input type="number" id="mrp" class="" required="true" name="mrp" step="0.01" style="width:180px; border-radius:5px;">
 							<hr>
 							<label>Stock : </label>
-							<input type="number" id="instock" required="true" name="instock" class="" style="width:180px; border-radius:5px;">
+							<input type="number" id="instock" required="true" name="stock" class="" style="width:180px; border-radius:5px;">
 							<hr>
 							<label>Product Photo : </label>
 							<input id="image" type="file" required="true" name="image[]" title="Choose a Product photo" class="  input-sm  " multiple><br>
-							<button type="button" id="prodspec" name="prodspec" onclick="pdetails()" class="btn btn-primary">Add Product Specification
-							</button><br><br>
-							<label id="lb1" style="display:none;">Fabric: </label>
-							<input type="hidden" id="id1" name="fabric" value="" style="width:180px; border-radius:5px; display:inline; margin-bottom: 25px;"><br id="br1" style="display:none;">
-							<label id="lb2" style="display:none;">Fit : </label>
-							<input type="hidden" id="id2" name="fit" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br2" style="display:none;">
-							<label id="lb3" style="display:none;">Occasion: </label>
-							<input type="hidden" id="id3" name="occasion" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br3" style="display:none;">
-							<label id="lb4" style="display:none;">Size : </label>
-							<input type="hidden" id="id4" name="size" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br4" style="display:none;">
-							<label id="lb5" style="display:none;">Pattern: </label>
-							<input type="hidden" id="id5" name="pattern" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br5" style="display:none;">
-							<label id="lb6" style="display:none;">Wash Care: </label>
-							<input type="hidden" id="id6" name="washcare" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; display:inline;"><br id="br6" style="display:none;">
-							<button type="submit" id="submit" name="submit" class="btn btn-success">Save</button>
+							
+							<label id="lb1" >Fabric: </label>
+							<input type="text" id="id1" name="fabric" value="" style="width:180px; border-radius:5px;  margin-bottom: 25px;"><br id="br1" >
+							<label id="lb2" >Fit : </label>
+							<input type="text" id="id2" name="fit" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; "><br id="br2" >
+							<label id="lb3" >Occasion: </label>
+							<input type="text" id="id3" name="occasion" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; "><br id="br3" >
+							<label id="lb4" >Size : </label>
+							<input type="text" id="id4" name="size" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; "><br id="br4" >
+							<label id="lb5" >Pattern: </label>
+							<input type="text" id="id5" name="pattern" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; "><br id="br5" >
+							<label id="lb6" >Wash Care: </label>
+							<input type="text" id="id6" name="washcare" value="" style="width:180px; margin-bottom: 25px; border-radius:5px; "><br id="br6" >
+							<input type="submit" id="submit" name="submit" class="btn btn-success"/>
 						</form><br>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script>
-		function pdetails() {
-			document.getElementById("id1").setAttribute("type", "text");
-			document.getElementById("id2").setAttribute("type", "text");
-			document.getElementById("id3").setAttribute("type", "text");
-			document.getElementById("id4").setAttribute("type", "text");
-			document.getElementById("id5").setAttribute("type", "text");
-			document.getElementById("id6").setAttribute("type", "text");
-			document.getElementById("lb1").style.display = "inline";
-			document.getElementById("lb2").style.display = "inline";
-			document.getElementById("lb3").style.display = "inline";
-			document.getElementById("lb4").style.display = "inline";
-			document.getElementById("lb5").style.display = "inline";
-			document.getElementById("lb6").style.display = "inline";
-			document.getElementById("br1").style.display = "block";
-			document.getElementById("br2").style.display = "block";
-			document.getElementById("br3").style.display = "block";
-			document.getElementById("br4").style.display = "block";
-			document.getElementById("br5").style.display = "block";
-			document.getElementById("br6").style.display = "block";
-		}
-	</script>
+	
 </body>
 </html>

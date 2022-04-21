@@ -49,8 +49,11 @@ body {
 }
 
 .logo-img {
-    height: 28px;
+    /* height: 28px;
     width: 75px;
+    margin-left: 20px; */
+    object-fit: contain;
+    height: 37px;
     margin-left: 20px;
 }
 
@@ -294,7 +297,9 @@ body {
 
 .product-img {
     object-fit: cover;
-    height: 400px;
+    /* height: 400px; */
+    height:330px;
+    object-fit: cover;
     width: 100%;
     position: relative;
 }
@@ -311,6 +316,10 @@ body {
 .product-label {
     color: #585d6b;
     font-size: 12px;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .product-link {
@@ -323,8 +332,17 @@ body {
     color: #000;
 }
 
+@media only screen and (max-width: 1800px) {
+    
+    .clothing-home {
+        margin: 0 5px 0 5px !important;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .clothing {
+        margin: 0 5px 0 5px;
+    }
+    .clothing-home {
         margin: 0 5px 0 5px;
     }
     .category-grid-container {
@@ -356,6 +374,9 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    .clothing-home {
+        margin: 0 5px 0 5px;
+    }
     .clothing {
         margin: 0 5px 0 5px;
     }
@@ -385,3 +406,32 @@ body {
         position: relative;
     }
 }
+
+.username {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 2100px) {
+    .product-img {
+        object-fit: cover;
+        /* height: 400px; */
+        height:400px;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+    }
+        .clothing-home {
+            margin: 0 250px 0 250px;
+        }
+}
+
+.underline{
+	background-color:#1083E8;
+	width:50%;
+	height:2px;
+}
+
+.fade {
+    opacity: 1;
+  }

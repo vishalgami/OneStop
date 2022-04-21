@@ -74,3 +74,8 @@ input::-webkit-inner-spin-button {
         height: 400px;
     }
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+}

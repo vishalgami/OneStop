@@ -42,10 +42,12 @@ body {
 @media (max-width: 600px) {
     img {
         margin-top: 20px;
-        width: 550px;
-        height: 310px;
+        height: 50px;
         float: center;
         margin-bottom: 20px;
+    }
+    .wrapper .top_navbar .logo a {
+        padding: 0 !important;
     }
 }
 
@@ -99,7 +101,7 @@ body {
         width: 650px;
         height: 65px;
         display: flex;
-        position: relative;
+        position: fixed;
         top: 0;
     }
     .wrapper.active .top_navbar {
@@ -176,7 +178,6 @@ body {
 
 .wrapper .top_navbar .logo a:hover {
     text-decoration: none;
-    background: #4360b5;
 }
 
 .wrapper .top_navbar .top_menu {
@@ -470,4 +471,9 @@ body {
     left: 0;
     top: 0;
     opacity: 0;
+}
+
+.modal-header {
+    background-color: #0f62b2;
+    color: #fff;
 }

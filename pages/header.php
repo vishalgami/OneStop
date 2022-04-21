@@ -1,3 +1,8 @@
+<?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,19 +55,32 @@
                                         <i class="fa fa-user-o " style="color:darkblue;"></i>
                                         <div class="header-icon-label">
                                             Profile
-                                            <div class="profile-dropdown-content">
-                                                <b>Welcome</b><br />
-                                                <div class="text-muted">Access your account and manage orders</div><br />
-                                                <a href="signin.php">
-                                                    <button type="button" class="btn btn-danger login-btn">Sign In</button>
-                                                </a><br />
-                                                <a href="signup.php" class="signup-link">Not connected yet ? Signup here !</a>
-                                                <hr />
-                                                <a href="profile.php" class="profile-links">Account</a>
-                                                <a href="orders.php" class="profile-links">Orders</a>
-                                                <a href="wishlist.php" class="profile-links">Wishlist</a>
-                                                <a href="contact.php" class="profile-links">Contact Us</a>
-                                            </div>
+                                            <?php 
+                                                if(!isset($_SESSION["login"])){?>
+                                                <div class="profile-dropdown-content">
+                                                    <b>Welcome</b><br />
+                                                    <div class="text-muted">Access your account and manage orders</div><br />
+                                                    <a href="signin.php">
+                                                        <button type="button" class="btn btn-danger login-btn">Sign In</button>
+                                                    </a><br />
+                                                    <a href="signup.php" class="signup-link">Not connected yet ? Signup here !</a>
+                                                    <hr />
+
+                                                    <a href="contact.php" class="profile-links">Contact Us</a>
+                                                </div>
+                                            <?php }else{ ?>
+                                                <div class="profile-dropdown-content">
+                                                    <b>Hi,<span class="username"><?php echo $_SESSION["username"];?></span></b><br />
+                                                    <a href="profile.php" class="profile-links">Account</a>
+                                                    <a href="orders.php" class="profile-links">Orders</a>
+                                                    <a href="wishlist.php" class="profile-links">Wishlist</a>
+                                                    <a href="contact.php" class="profile-links">Contact Us</a>
+                                                    <hr />
+                                                    <a href="../includes/templates/logout.php">
+                                                        <button type="button" class="btn btn-danger login-btn">Log Out</button>
+                                                    </a>
+                                                </div>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -95,10 +113,10 @@
                     </div>
                 </div>
                 <div class="justify-content-center search" style="padding:20px 0px 10px 20px !important;" id="navbarCenteredExample">
-                    <form class="d-flex input-group w-auto">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <form class="d-flex input-group w-auto" action="search.php" method="get">
+                        <input type="search" name="query" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                         <span class="input-group-text border-0" id="search-addon">
-                            <i class="fa fa-search"></i>
+                            <button type="submit" class="input-group-text border-0"><i class="fa fa-search"></i></button>
                         </span>
                     </form>
                 </div>

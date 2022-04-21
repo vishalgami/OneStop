@@ -37,7 +37,7 @@
 								<div class="dropdown-content">
 
 									<a href="profile.php">My Profile</a>
-									<a href="../signin.php">Logout</a>
+									<a href="../../includes/templates/logout.php">Logout</a>
 								</div>
 							</div>
 							<span id="adminID">Welcome,Admin</span>

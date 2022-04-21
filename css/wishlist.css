@@ -25,16 +25,16 @@ body {
     position: relative;
 }
 
-footer-parent {
+/* footer-parent {
     bottom: 0;
     width: 100%;
-}
+} */
 
-.footer {
+/* .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-}
+} */
 
 .right-menu {
     margin: 11px 40px 10px 0 !important;
