@@ -44,12 +44,12 @@
             // $pwdErr = "Current Password is required!";
         }
         else {
-            $password = test_input($_POST["currentPwd"]);
-            if(!preg_match("/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/",$password)){
+            if(!preg_match("/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/",test_input($_POST["currentPwd"]))){
                 $pwdErr = "Current password requires at least 8 characters and atleast one uppercase letter";
                 echo "<script>alert('$pwdErr');window.location.href='./profile.php';</script>";  
             }
             else{
+                $password = test_input($_POST["currentPwd"]);
                 $pwd = $password;
                 $pwd = md5($pwd);
             }
@@ -60,11 +60,11 @@
             
         }
         else {
-            $newPwd = test_input($_POST["newPwd"]);
-            if(!preg_match("/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/",$newPwd)){
+            if(!preg_match("/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/",test_input($_POST["newPwd"]))){
                 $newPwdErr = "New password requires at least 8 characters and atleast one uppercase letter";
                 echo "<script>alert('$newPwdErr');window.location.href='./profile.php';</script>";  
             }else{
+                $newPwd = test_input($_POST["newPwd"]);
                 $newPwd = md5($newPwd);
             }
         }
